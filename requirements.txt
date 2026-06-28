@@ -23,3 +23,5 @@ python-dateutil>=2.9.0
 
 # Progress Bar
 tqdm>=4.67.0
+
+pywin32

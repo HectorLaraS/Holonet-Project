@@ -64,5 +64,7 @@ class Settings:
 
     REPORT_INTERVAL_SECONDS = int(os.getenv("REPORT_INTERVAL_SECONDS","43200"))
 
+    SERVICE_RESTART_DELAY_SECONDS = int(os.getenv("SERVICE_RESTART_DELAY_SECONDS","5"))
+
 
 settings = Settings()
