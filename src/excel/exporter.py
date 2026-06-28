@@ -231,6 +231,24 @@ class ExcelExporter:
                         column=column
                     ).number_format = '0.00"%"'
 
+        if "Usage (%)" in header_map:
+
+            column = header_map["Usage (%)"]
+
+            column_letter = get_column_letter(column)
+
+            worksheet.conditional_formatting.add(
+                f"{column_letter}2:{column_letter}{worksheet.max_row}",
+                DataBarRule(
+                    start_type="num",
+                    start_value=0,
+                    end_type="num",
+                    end_value=100,
+                    color="63C384",
+                    showValue=True
+                )
+            )
+
         workbook.save(output_file)
 
         logger.info(
