@@ -74,6 +74,34 @@ class ExcelExporter:
             index=False
         )
 
+        workbook = load_workbook(output_file)
+
+        worksheet = workbook.active
+
+        header_fill = PatternFill(
+            fill_type="solid",
+            start_color="C32032",
+            end_color="C32032"
+        )
+
+        header_font = Font(
+            bold=True,
+            color="FFFFFF"
+        )
+
+        header_alignment = Alignment(
+            horizontal="center",
+            vertical="center"
+        )
+
+        for cell in worksheet[1]:
+
+            cell.fill = header_fill
+            cell.font = header_font
+            cell.alignment = header_alignment
+
+        workbook.save(output_file)
+
         logger.info(
             "Excel generated successfully."
         )
