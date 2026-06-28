@@ -60,5 +60,9 @@ class Settings:
         "./exports"
     )
 
+    POLL_INTERVAL_SECONDS = int(os.getenv("POLL_INTERVAL_SECONDS","300"))
+
+    REPORT_INTERVAL_SECONDS = int(os.getenv("REPORT_INTERVAL_SECONDS","43200"))
+
 
 settings = Settings()
