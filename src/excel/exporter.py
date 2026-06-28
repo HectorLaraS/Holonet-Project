@@ -17,6 +17,8 @@ from openpyxl.styles import PatternFill
 from openpyxl.styles import Font
 from openpyxl.styles import Alignment
 from openpyxl import load_workbook
+from openpyxl.formatting.rule import DataBarRule
+from openpyxl.utils import get_column_letter
 
 logger = get_logger(__name__)
 
@@ -144,6 +146,90 @@ class ExcelExporter:
 
         worksheet.freeze_panes = "A2"
         worksheet.auto_filter.ref = worksheet.dimensions
+
+        gb_columns = [
+            "Usage Limit (GB)",
+            "Priority (GB)",
+            "Standard (GB)",
+            "Consumed (GB)",
+            "Available (GB)",
+            "Block Size (GB)",
+            "Total Block (GB)",
+            "Block Used (GB)",
+            "Block Remaining (GB)"
+        ]
+
+        currency_columns = [
+            "Monthly Cost",
+            "Block Price",
+            "Total Block Cost"
+        ]
+
+        date_columns = [
+            "Cycle Start",
+            "Cycle End"
+        ]
+
+        percent_columns = [
+            "Usage (%)"
+        ]
+
+        header_map = {}
+
+        for cell in worksheet[1]:
+            header_map[cell.value] = cell.column
+
+        for column_name in gb_columns:
+
+            if column_name in header_map:
+
+                column = header_map[column_name]
+
+                for row in range(2, worksheet.max_row + 1):
+
+                    worksheet.cell(
+                        row=row,
+                        column=column
+                    ).number_format = "0.00"
+
+        for column_name in currency_columns:
+
+            if column_name in header_map:
+
+                column = header_map[column_name]
+
+                for row in range(2, worksheet.max_row + 1):
+
+                    worksheet.cell(
+                        row=row,
+                        column=column
+                    ).number_format = '$#,##0.00'
+
+        for column_name in date_columns:
+
+            if column_name in header_map:
+
+                column = header_map[column_name]
+
+                for row in range(2, worksheet.max_row + 1):
+
+                    worksheet.cell(
+                        row=row,
+                        column=column
+                    ).number_format = "yyyy-mm-dd"
+
+        for column_name in percent_columns:
+
+            if column_name in header_map:
+
+                column = header_map[column_name]
+
+                for row in range(2, worksheet.max_row + 1):
+
+                    worksheet.cell(
+                        row=row,
+                        column=column
+                    ).number_format = '0.00"%"'
 
         workbook.save(output_file)
 
