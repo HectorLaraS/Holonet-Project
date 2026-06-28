@@ -39,6 +39,35 @@ class ExcelExporter:
                 connection
             )
 
+            dataframe.rename(
+            columns={
+                "account_number": "Account Number",
+                "service_line_number": "Service Line",
+                "product_name": "Plan",
+                "product_id": "Product ID",
+                "billing_cycle_key": "Billing Cycle",
+                "cycle_start": "Cycle Start",
+                "cycle_end": "Cycle End",
+                "usage_limit_gb": "Usage Limit (GB)",
+                "priority_gb": "Priority (GB)",
+                "standard_gb": "Standard (GB)",
+                "consumed_gb": "Consumed (GB)",
+                "available_gb": "Available (GB)",
+                "usage_percent": "Usage (%)",
+                "recurring_cost": "Monthly Cost",
+                "data_block_type": "Data Block Type",
+                "blocks_count": "Blocks",
+                "per_block_amount_gb": "Block Size (GB)",
+                "total_amount_gb": "Total Block (GB)",
+                "consumed_amount_gb": "Block Used (GB)",
+                "remaining_amount_gb": "Block Remaining (GB)",
+                "per_block_price": "Block Price",
+                "total_price": "Total Block Cost",
+                "currency": "Currency"
+            },
+            inplace=True
+        )
+
         logger.info(
             f"{len(dataframe)} rows loaded."
         )
