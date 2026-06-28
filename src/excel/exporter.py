@@ -113,6 +113,9 @@ class ExcelExporter:
                 column_cells[0].column_letter
             ].width = adjusted_width
 
+        worksheet.freeze_panes = "A2"
+        worksheet.auto_filter.ref = worksheet.dimensions
+
         workbook.save(output_file)
 
         logger.info(
