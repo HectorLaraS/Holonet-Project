@@ -100,6 +100,19 @@ class ExcelExporter:
             cell.font = header_font
             cell.alignment = header_alignment
 
+        for column_cells in worksheet.columns:
+
+            length = max(
+                len(str(cell.value)) if cell.value is not None else 0
+                for cell in column_cells
+            )
+
+            adjusted_width = min(length + 3, 60)
+
+            worksheet.column_dimensions[
+                column_cells[0].column_letter
+            ].width = adjusted_width
+
         workbook.save(output_file)
 
         logger.info(
