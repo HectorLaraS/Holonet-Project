@@ -17,8 +17,9 @@ from openpyxl.styles import PatternFill
 from openpyxl.styles import Font
 from openpyxl.styles import Alignment
 from openpyxl import load_workbook
-from openpyxl.formatting.rule import DataBarRule
-from openpyxl.utils import get_column_letter
+from openpyxl.styles import PatternFill
+from openpyxl.formatting.rule import CellIsRule
+from openpyxl.styles import Font
 
 logger = get_logger(__name__)
 
@@ -231,23 +232,47 @@ class ExcelExporter:
                         column=column
                     ).number_format = '0.00"%"'
 
+
         if "Usage (%)" in header_map:
 
             column = header_map["Usage (%)"]
 
-            column_letter = get_column_letter(column)
+            for row in range(2, worksheet.max_row + 1):
 
-            worksheet.conditional_formatting.add(
-                f"{column_letter}2:{column_letter}{worksheet.max_row}",
-                DataBarRule(
-                    start_type="num",
-                    start_value=0,
-                    end_type="num",
-                    end_value=100,
-                    color="63C384",
-                    showValue=True
+                cell = worksheet.cell(
+                    row=row,
+                    column=column
                 )
-            )
+
+                print(
+                    row,
+                    cell.value,
+                    type(cell.value)
+                )
+
+                if cell.value is None:
+                    continue
+
+                if cell.value >= 90:
+
+                    cell.font = Font(
+                        bold=True,
+                        color="C00000"
+                    )
+
+                elif cell.value >= 80:
+
+                    cell.font = Font(
+                        bold=True,
+                        color="C09000"
+                    )
+
+                else:
+
+                    cell.font = Font(
+                        bold=True,
+                        color="008000"
+                    )
 
         workbook.save(output_file)
 
