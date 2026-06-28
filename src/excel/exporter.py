@@ -13,6 +13,10 @@ from src.excel.queries import REPORT_QUERY
 from src.utils.logger import get_logger
 from pathlib import Path
 from datetime import datetime
+from openpyxl.styles import PatternFill
+from openpyxl.styles import Font
+from openpyxl.styles import Alignment
+from openpyxl import load_workbook
 
 logger = get_logger(__name__)
 
@@ -40,3 +44,38 @@ class ExcelExporter:
         )
 
         return dataframe
+    
+    def export_report(self) -> Path:
+        """
+        Exports the report to Excel.
+        """
+
+        dataframe = self.load_report()
+
+        exports_folder = Path("exports")
+
+        exports_folder.mkdir(
+            exist_ok=True
+        )
+
+        file_name = (
+            f"Holonet_"
+            f"{datetime.now():%Y%m%d_%H%M%S}.xlsx"
+        )
+
+        output_file = exports_folder / file_name
+
+        logger.info(
+            f"Generating Excel: {output_file}"
+        )
+
+        dataframe.to_excel(
+            output_file,
+            index=False
+        )
+
+        logger.info(
+            "Excel generated successfully."
+        )
+
+        return output_file

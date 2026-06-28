@@ -22,12 +22,16 @@ def main():
 
     exporter = ExcelExporter()
 
-    df = exporter.load_report()
+    output_file = exporter.export_report()
 
     print()
-    print(df.head())
+
+    print("Excel generated successfully.")
+
+    print(output_file)
 
     print()
+
     print("Process completed successfully.")
 
 
