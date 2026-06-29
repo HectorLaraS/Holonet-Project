@@ -709,3 +709,1117 @@ D:\PythonGeneral\programas\Holonet\src\excel\exporter.py:40: UserWarning: pandas
 2026-06-28 18:00:32,859 | INFO     | src.excel.exporter | 50 rows loaded.
 2026-06-28 18:00:32,860 | INFO     | src.excel.exporter | Generating Excel: exports\Holonet_20260628_180032.xlsx
 2026-06-28 18:00:32,964 | INFO     | src.excel.exporter | Excel generated successfully.
+2026-06-29 10:03:17,262 | INFO     | src.api.auth | Requesting Starlink OAuth token...
+2026-06-29 10:03:17,736 | INFO     | src.api.auth | OAuth token obtained successfully.
+2026-06-29 10:03:17,738 | INFO     | src.api.starlink_client | Retrieving Starlink products...
+2026-06-29 10:03:18,650 | INFO     | src.api.starlink_client | Products retrieved successfully.
+2026-06-29 10:03:18,653 | INFO     | src.database.repository | Saving 2 products...
+2026-06-29 10:03:18,653 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:18,760 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:18,785 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:18,786 | INFO     | src.database.repository | Products saved successfully.
+2026-06-29 10:03:18,786 | INFO     | src.api.starlink_client | Retrieving Starlink usage...
+2026-06-29 10:03:19,407 | INFO     | src.api.starlink_client | Usage retrieved successfully.
+2026-06-29 10:03:19,414 | INFO     | src.database.repository | Processing 50 service lines...
+2026-06-29 10:03:19,414 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:19,415 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:19,674 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:19,674 | INFO     | src.database.repository | Usage saved successfully.
+2026-06-29 10:03:19,675 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-1768423-85100-43
+2026-06-29 10:03:20,162 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-1768423-85100-43
+2026-06-29 10:03:20,165 | INFO     | src.database.repository | Saving Service Line details: AST-1768423-85100-43
+2026-06-29 10:03:20,165 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:20,166 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:20,180 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:20,181 | INFO     | src.database.repository | Service Line details saved: AST-1768423-85100-43
+2026-06-29 10:03:20,181 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-1768429-22106-46
+2026-06-29 10:03:20,682 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-1768429-22106-46
+2026-06-29 10:03:20,683 | INFO     | src.database.repository | Saving Service Line details: AST-1768429-22106-46
+2026-06-29 10:03:20,683 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:20,684 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:20,698 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:20,698 | INFO     | src.database.repository | Service Line details saved: AST-1768429-22106-46
+2026-06-29 10:03:20,698 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-1768434-48766-62
+2026-06-29 10:03:21,180 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-1768434-48766-62
+2026-06-29 10:03:21,181 | INFO     | src.database.repository | Saving Service Line details: AST-1768434-48766-62
+2026-06-29 10:03:21,181 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:21,182 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:21,194 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:21,194 | INFO     | src.database.repository | Service Line details saved: AST-1768434-48766-62
+2026-06-29 10:03:21,194 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-2713247-67065-48
+2026-06-29 10:03:21,661 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-2713247-67065-48
+2026-06-29 10:03:21,664 | INFO     | src.database.repository | Saving Service Line details: AST-2713247-67065-48
+2026-06-29 10:03:21,664 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:21,665 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:21,676 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:21,676 | INFO     | src.database.repository | Service Line details saved: AST-2713247-67065-48
+2026-06-29 10:03:21,677 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-2713265-69251-47
+2026-06-29 10:03:22,203 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-2713265-69251-47
+2026-06-29 10:03:22,204 | INFO     | src.database.repository | Saving Service Line details: AST-2713265-69251-47
+2026-06-29 10:03:22,205 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:22,205 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:22,221 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:22,221 | INFO     | src.database.repository | Service Line details saved: AST-2713265-69251-47
+2026-06-29 10:03:22,221 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-2744393-35215-46
+2026-06-29 10:03:23,046 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-2744393-35215-46
+2026-06-29 10:03:23,048 | INFO     | src.database.repository | Saving Service Line details: AST-2744393-35215-46
+2026-06-29 10:03:23,048 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:23,049 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:23,062 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:23,062 | INFO     | src.database.repository | Service Line details saved: AST-2744393-35215-46
+2026-06-29 10:03:23,062 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-2823582-69427-56
+2026-06-29 10:03:23,535 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-2823582-69427-56
+2026-06-29 10:03:23,537 | INFO     | src.database.repository | Saving Service Line details: AST-2823582-69427-56
+2026-06-29 10:03:23,537 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:23,538 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:23,542 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:23,542 | INFO     | src.database.repository | Service Line details saved: AST-2823582-69427-56
+2026-06-29 10:03:23,542 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-3062613-25982-45
+2026-06-29 10:03:24,028 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-3062613-25982-45
+2026-06-29 10:03:24,030 | INFO     | src.database.repository | Saving Service Line details: AST-3062613-25982-45
+2026-06-29 10:03:24,030 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:24,030 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:24,040 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:24,040 | INFO     | src.database.repository | Service Line details saved: AST-3062613-25982-45
+2026-06-29 10:03:24,040 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1493579-34262-80
+2026-06-29 10:03:24,592 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1493579-34262-80
+2026-06-29 10:03:24,594 | INFO     | src.database.repository | Saving Service Line details: SL-1493579-34262-80
+2026-06-29 10:03:24,594 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:24,595 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:24,610 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:24,610 | INFO     | src.database.repository | Service Line details saved: SL-1493579-34262-80
+2026-06-29 10:03:24,611 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1494028-89832-83
+2026-06-29 10:03:25,201 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1494028-89832-83
+2026-06-29 10:03:25,203 | INFO     | src.database.repository | Saving Service Line details: SL-1494028-89832-83
+2026-06-29 10:03:25,203 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:25,203 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:25,220 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:25,220 | INFO     | src.database.repository | Service Line details saved: SL-1494028-89832-83
+2026-06-29 10:03:25,220 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1494501-21076-65
+2026-06-29 10:03:25,814 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1494501-21076-65
+2026-06-29 10:03:25,815 | INFO     | src.database.repository | Saving Service Line details: SL-1494501-21076-65
+2026-06-29 10:03:25,816 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:25,823 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:25,834 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:25,834 | INFO     | src.database.repository | Service Line details saved: SL-1494501-21076-65
+2026-06-29 10:03:25,834 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1744478-76049-86
+2026-06-29 10:03:26,653 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1744478-76049-86
+2026-06-29 10:03:26,655 | INFO     | src.database.repository | Saving Service Line details: SL-1744478-76049-86
+2026-06-29 10:03:26,655 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:26,656 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:26,669 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:26,669 | INFO     | src.database.repository | Service Line details saved: SL-1744478-76049-86
+2026-06-29 10:03:26,669 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1808826-10249-74
+2026-06-29 10:03:27,182 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1808826-10249-74
+2026-06-29 10:03:27,183 | INFO     | src.database.repository | Saving Service Line details: SL-1808826-10249-74
+2026-06-29 10:03:27,183 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:27,184 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:27,195 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:27,196 | INFO     | src.database.repository | Service Line details saved: SL-1808826-10249-74
+2026-06-29 10:03:27,196 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1982495-86954-95
+2026-06-29 10:03:27,862 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1982495-86954-95
+2026-06-29 10:03:27,863 | INFO     | src.database.repository | Saving Service Line details: SL-1982495-86954-95
+2026-06-29 10:03:27,863 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:27,864 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:27,872 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:27,873 | INFO     | src.database.repository | Service Line details saved: SL-1982495-86954-95
+2026-06-29 10:03:27,873 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1992576-45383-87
+2026-06-29 10:03:28,439 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1992576-45383-87
+2026-06-29 10:03:28,442 | INFO     | src.database.repository | Saving Service Line details: SL-1992576-45383-87
+2026-06-29 10:03:28,442 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:28,442 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:28,453 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:28,453 | INFO     | src.database.repository | Service Line details saved: SL-1992576-45383-87
+2026-06-29 10:03:28,453 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1992946-91099-93
+2026-06-29 10:03:29,002 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1992946-91099-93
+2026-06-29 10:03:29,003 | INFO     | src.database.repository | Saving Service Line details: SL-1992946-91099-93
+2026-06-29 10:03:29,004 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:29,004 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:29,020 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:29,020 | INFO     | src.database.repository | Service Line details saved: SL-1992946-91099-93
+2026-06-29 10:03:29,021 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1995916-23300-73
+2026-06-29 10:03:29,602 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1995916-23300-73
+2026-06-29 10:03:29,603 | INFO     | src.database.repository | Saving Service Line details: SL-1995916-23300-73
+2026-06-29 10:03:29,603 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:29,604 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:29,608 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:29,609 | INFO     | src.database.repository | Service Line details saved: SL-1995916-23300-73
+2026-06-29 10:03:29,609 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2008042-17553-62
+2026-06-29 10:03:30,170 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2008042-17553-62
+2026-06-29 10:03:30,172 | INFO     | src.database.repository | Saving Service Line details: SL-2008042-17553-62
+2026-06-29 10:03:30,172 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:30,173 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:30,183 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:30,183 | INFO     | src.database.repository | Service Line details saved: SL-2008042-17553-62
+2026-06-29 10:03:30,183 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2018059-62098-75
+2026-06-29 10:03:30,730 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2018059-62098-75
+2026-06-29 10:03:30,732 | INFO     | src.database.repository | Saving Service Line details: SL-2018059-62098-75
+2026-06-29 10:03:30,732 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:30,732 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:30,742 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:30,742 | INFO     | src.database.repository | Service Line details saved: SL-2018059-62098-75
+2026-06-29 10:03:30,742 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2063135-73813-67
+2026-06-29 10:03:31,346 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2063135-73813-67
+2026-06-29 10:03:31,348 | INFO     | src.database.repository | Saving Service Line details: SL-2063135-73813-67
+2026-06-29 10:03:31,348 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:31,348 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:31,360 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:31,360 | INFO     | src.database.repository | Service Line details saved: SL-2063135-73813-67
+2026-06-29 10:03:31,360 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2064043-74007-62
+2026-06-29 10:03:31,871 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2064043-74007-62
+2026-06-29 10:03:31,874 | INFO     | src.database.repository | Saving Service Line details: SL-2064043-74007-62
+2026-06-29 10:03:31,874 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:31,875 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:31,890 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:31,890 | INFO     | src.database.repository | Service Line details saved: SL-2064043-74007-62
+2026-06-29 10:03:31,890 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2064077-78510-72
+2026-06-29 10:03:32,405 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2064077-78510-72
+2026-06-29 10:03:32,407 | INFO     | src.database.repository | Saving Service Line details: SL-2064077-78510-72
+2026-06-29 10:03:32,407 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:32,407 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:32,424 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:32,424 | INFO     | src.database.repository | Service Line details saved: SL-2064077-78510-72
+2026-06-29 10:03:32,424 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2075603-61766-74
+2026-06-29 10:03:32,941 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2075603-61766-74
+2026-06-29 10:03:32,942 | INFO     | src.database.repository | Saving Service Line details: SL-2075603-61766-74
+2026-06-29 10:03:32,942 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:32,943 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:32,947 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:32,947 | INFO     | src.database.repository | Service Line details saved: SL-2075603-61766-74
+2026-06-29 10:03:32,947 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2077255-26096-76
+2026-06-29 10:03:33,449 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2077255-26096-76
+2026-06-29 10:03:33,451 | INFO     | src.database.repository | Saving Service Line details: SL-2077255-26096-76
+2026-06-29 10:03:33,451 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:33,452 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:33,456 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:33,456 | INFO     | src.database.repository | Service Line details saved: SL-2077255-26096-76
+2026-06-29 10:03:33,456 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2086022-35654-68
+2026-06-29 10:03:34,039 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2086022-35654-68
+2026-06-29 10:03:34,041 | INFO     | src.database.repository | Saving Service Line details: SL-2086022-35654-68
+2026-06-29 10:03:34,041 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:34,041 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:34,045 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:34,045 | INFO     | src.database.repository | Service Line details saved: SL-2086022-35654-68
+2026-06-29 10:03:34,045 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2088977-81757-94
+2026-06-29 10:03:34,506 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2088977-81757-94
+2026-06-29 10:03:34,507 | INFO     | src.database.repository | Saving Service Line details: SL-2088977-81757-94
+2026-06-29 10:03:34,507 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:34,508 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:34,518 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:34,518 | INFO     | src.database.repository | Service Line details saved: SL-2088977-81757-94
+2026-06-29 10:03:34,518 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2095446-46732-77
+2026-06-29 10:03:35,441 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2095446-46732-77
+2026-06-29 10:03:35,443 | INFO     | src.database.repository | Saving Service Line details: SL-2095446-46732-77
+2026-06-29 10:03:35,443 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:35,444 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:35,454 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:35,455 | INFO     | src.database.repository | Service Line details saved: SL-2095446-46732-77
+2026-06-29 10:03:35,455 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2099072-96444-81
+2026-06-29 10:03:36,156 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2099072-96444-81
+2026-06-29 10:03:36,157 | INFO     | src.database.repository | Saving Service Line details: SL-2099072-96444-81
+2026-06-29 10:03:36,157 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:36,158 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:36,173 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:36,173 | INFO     | src.database.repository | Service Line details saved: SL-2099072-96444-81
+2026-06-29 10:03:36,174 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2107959-73576-86
+2026-06-29 10:03:36,669 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2107959-73576-86
+2026-06-29 10:03:36,671 | INFO     | src.database.repository | Saving Service Line details: SL-2107959-73576-86
+2026-06-29 10:03:36,671 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:36,672 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:36,676 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:36,676 | INFO     | src.database.repository | Service Line details saved: SL-2107959-73576-86
+2026-06-29 10:03:36,676 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2109823-23870-70
+2026-06-29 10:03:37,393 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2109823-23870-70
+2026-06-29 10:03:37,396 | INFO     | src.database.repository | Saving Service Line details: SL-2109823-23870-70
+2026-06-29 10:03:37,396 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:37,397 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:37,406 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:37,407 | INFO     | src.database.repository | Service Line details saved: SL-2109823-23870-70
+2026-06-29 10:03:37,407 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2146664-58949-89
+2026-06-29 10:03:38,098 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2146664-58949-89
+2026-06-29 10:03:38,099 | INFO     | src.database.repository | Saving Service Line details: SL-2146664-58949-89
+2026-06-29 10:03:38,099 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:38,100 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:38,105 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:38,105 | INFO     | src.database.repository | Service Line details saved: SL-2146664-58949-89
+2026-06-29 10:03:38,105 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2149793-39810-81
+2026-06-29 10:03:38,718 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2149793-39810-81
+2026-06-29 10:03:38,720 | INFO     | src.database.repository | Saving Service Line details: SL-2149793-39810-81
+2026-06-29 10:03:38,720 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:38,721 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:38,729 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:38,729 | INFO     | src.database.repository | Service Line details saved: SL-2149793-39810-81
+2026-06-29 10:03:38,730 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2151016-22487-64
+2026-06-29 10:03:39,447 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2151016-22487-64
+2026-06-29 10:03:39,449 | INFO     | src.database.repository | Saving Service Line details: SL-2151016-22487-64
+2026-06-29 10:03:39,449 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:39,450 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:39,454 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:39,455 | INFO     | src.database.repository | Service Line details saved: SL-2151016-22487-64
+2026-06-29 10:03:39,455 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2153530-62552-64
+2026-06-29 10:03:40,049 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2153530-62552-64
+2026-06-29 10:03:40,050 | INFO     | src.database.repository | Saving Service Line details: SL-2153530-62552-64
+2026-06-29 10:03:40,051 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:40,051 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:40,062 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:40,062 | INFO     | src.database.repository | Service Line details saved: SL-2153530-62552-64
+2026-06-29 10:03:40,062 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2160190-33919-69
+2026-06-29 10:03:40,665 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2160190-33919-69
+2026-06-29 10:03:40,666 | INFO     | src.database.repository | Saving Service Line details: SL-2160190-33919-69
+2026-06-29 10:03:40,667 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:40,667 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:40,677 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:40,677 | INFO     | src.database.repository | Service Line details saved: SL-2160190-33919-69
+2026-06-29 10:03:40,677 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2160428-84867-81
+2026-06-29 10:03:41,217 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2160428-84867-81
+2026-06-29 10:03:41,219 | INFO     | src.database.repository | Saving Service Line details: SL-2160428-84867-81
+2026-06-29 10:03:41,219 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:41,220 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:41,229 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:41,229 | INFO     | src.database.repository | Service Line details saved: SL-2160428-84867-81
+2026-06-29 10:03:41,229 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2162652-18200-60
+2026-06-29 10:03:41,790 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2162652-18200-60
+2026-06-29 10:03:41,791 | INFO     | src.database.repository | Saving Service Line details: SL-2162652-18200-60
+2026-06-29 10:03:41,791 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:41,792 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:41,801 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:41,801 | INFO     | src.database.repository | Service Line details saved: SL-2162652-18200-60
+2026-06-29 10:03:41,801 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2172503-11389-67
+2026-06-29 10:03:42,411 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2172503-11389-67
+2026-06-29 10:03:42,413 | INFO     | src.database.repository | Saving Service Line details: SL-2172503-11389-67
+2026-06-29 10:03:42,414 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:42,414 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:42,423 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:42,423 | INFO     | src.database.repository | Service Line details saved: SL-2172503-11389-67
+2026-06-29 10:03:42,423 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2250439-40369-72
+2026-06-29 10:03:43,122 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2250439-40369-72
+2026-06-29 10:03:43,124 | INFO     | src.database.repository | Saving Service Line details: SL-2250439-40369-72
+2026-06-29 10:03:43,125 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:43,125 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:43,134 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:43,134 | INFO     | src.database.repository | Service Line details saved: SL-2250439-40369-72
+2026-06-29 10:03:43,134 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2360594-13968-81
+2026-06-29 10:03:43,741 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2360594-13968-81
+2026-06-29 10:03:43,742 | INFO     | src.database.repository | Saving Service Line details: SL-2360594-13968-81
+2026-06-29 10:03:43,742 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:43,743 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:43,746 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:43,746 | INFO     | src.database.repository | Service Line details saved: SL-2360594-13968-81
+2026-06-29 10:03:43,746 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2386360-80177-76
+2026-06-29 10:03:44,557 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2386360-80177-76
+2026-06-29 10:03:44,558 | INFO     | src.database.repository | Saving Service Line details: SL-2386360-80177-76
+2026-06-29 10:03:44,558 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:44,559 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:44,586 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:44,587 | INFO     | src.database.repository | Service Line details saved: SL-2386360-80177-76
+2026-06-29 10:03:44,587 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2386581-36620-75
+2026-06-29 10:03:45,374 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2386581-36620-75
+2026-06-29 10:03:45,375 | INFO     | src.database.repository | Saving Service Line details: SL-2386581-36620-75
+2026-06-29 10:03:45,375 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:45,376 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:45,394 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:45,394 | INFO     | src.database.repository | Service Line details saved: SL-2386581-36620-75
+2026-06-29 10:03:45,394 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2429607-25076-75
+2026-06-29 10:03:45,991 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2429607-25076-75
+2026-06-29 10:03:45,994 | INFO     | src.database.repository | Saving Service Line details: SL-2429607-25076-75
+2026-06-29 10:03:45,994 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:45,994 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:46,008 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:46,009 | INFO     | src.database.repository | Service Line details saved: SL-2429607-25076-75
+2026-06-29 10:03:46,009 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2440738-51926-76
+2026-06-29 10:03:46,604 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2440738-51926-76
+2026-06-29 10:03:46,605 | INFO     | src.database.repository | Saving Service Line details: SL-2440738-51926-76
+2026-06-29 10:03:46,606 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:46,606 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:46,632 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:46,632 | INFO     | src.database.repository | Service Line details saved: SL-2440738-51926-76
+2026-06-29 10:03:46,632 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2453162-17257-70
+2026-06-29 10:03:47,220 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2453162-17257-70
+2026-06-29 10:03:47,222 | INFO     | src.database.repository | Saving Service Line details: SL-2453162-17257-70
+2026-06-29 10:03:47,222 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:47,223 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:47,239 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:47,239 | INFO     | src.database.repository | Service Line details saved: SL-2453162-17257-70
+2026-06-29 10:03:47,239 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2570147-97710-75
+2026-06-29 10:03:48,042 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2570147-97710-75
+2026-06-29 10:03:48,044 | INFO     | src.database.repository | Saving Service Line details: SL-2570147-97710-75
+2026-06-29 10:03:48,044 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:48,045 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:48,058 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:48,058 | INFO     | src.database.repository | Service Line details saved: SL-2570147-97710-75
+2026-06-29 10:03:48,058 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2734900-39685-81
+2026-06-29 10:03:48,560 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2734900-39685-81
+2026-06-29 10:03:48,562 | INFO     | src.database.repository | Saving Service Line details: SL-2734900-39685-81
+2026-06-29 10:03:48,563 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:48,563 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:48,584 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:48,584 | INFO     | src.database.repository | Service Line details saved: SL-2734900-39685-81
+2026-06-29 10:03:48,584 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2847330-92676-82
+2026-06-29 10:03:49,116 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2847330-92676-82
+2026-06-29 10:03:49,118 | INFO     | src.database.repository | Saving Service Line details: SL-2847330-92676-82
+2026-06-29 10:03:49,118 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:49,118 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:49,130 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:49,130 | INFO     | src.database.repository | Service Line details saved: SL-2847330-92676-82
+2026-06-29 10:03:49,131 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2983310-76960-79
+2026-06-29 10:03:49,698 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2983310-76960-79
+2026-06-29 10:03:49,701 | INFO     | src.database.repository | Saving Service Line details: SL-2983310-76960-79
+2026-06-29 10:03:49,701 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:49,702 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:49,717 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:49,717 | INFO     | src.database.repository | Service Line details saved: SL-2983310-76960-79
+2026-06-29 10:03:49,717 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-3316341-17070-61
+2026-06-29 10:03:50,289 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-3316341-17070-61
+2026-06-29 10:03:50,290 | INFO     | src.database.repository | Saving Service Line details: SL-3316341-17070-61
+2026-06-29 10:03:50,291 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:50,291 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:03:50,308 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:50,308 | INFO     | src.database.repository | Service Line details saved: SL-3316341-17070-61
+2026-06-29 10:03:50,309 | INFO     | src.excel.exporter | Loading report data...
+2026-06-29 10:03:50,309 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:03:50,309 | INFO     | src.database.connection | Connected successfully.
+D:\PythonGeneral\programas\Holonet\src\excel\exporter.py:37: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  dataframe = pd.read_sql(
+2026-06-29 10:03:50,338 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:03:50,338 | INFO     | src.excel.exporter | 50 rows loaded.
+2026-06-29 10:03:50,339 | INFO     | src.excel.exporter | Generating Excel: exports\Holonet_20260629_100350.xlsx
+2026-06-29 10:03:50,518 | INFO     | src.excel.exporter | Excel generated successfully.
+2026-06-29 10:04:17,529 | INFO     | src.api.auth | Requesting Starlink OAuth token...
+2026-06-29 10:04:18,011 | INFO     | src.api.auth | OAuth token obtained successfully.
+2026-06-29 10:04:18,013 | INFO     | src.api.starlink_client | Retrieving Starlink products...
+2026-06-29 10:04:18,583 | INFO     | src.api.starlink_client | Products retrieved successfully.
+2026-06-29 10:04:18,585 | INFO     | src.database.repository | Saving 2 products...
+2026-06-29 10:04:18,586 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:18,586 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:18,604 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:18,604 | INFO     | src.database.repository | Products saved successfully.
+2026-06-29 10:04:18,605 | INFO     | src.api.starlink_client | Retrieving Starlink usage...
+2026-06-29 10:04:19,218 | INFO     | src.api.starlink_client | Usage retrieved successfully.
+2026-06-29 10:04:19,225 | INFO     | src.database.repository | Processing 50 service lines...
+2026-06-29 10:04:19,225 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:19,226 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:19,492 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:19,492 | INFO     | src.database.repository | Usage saved successfully.
+2026-06-29 10:04:19,492 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-1768423-85100-43
+2026-06-29 10:04:19,992 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-1768423-85100-43
+2026-06-29 10:04:19,993 | INFO     | src.database.repository | Saving Service Line details: AST-1768423-85100-43
+2026-06-29 10:04:19,994 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:19,994 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:20,009 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:20,009 | INFO     | src.database.repository | Service Line details saved: AST-1768423-85100-43
+2026-06-29 10:04:20,010 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-1768429-22106-46
+2026-06-29 10:04:20,526 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-1768429-22106-46
+2026-06-29 10:04:20,528 | INFO     | src.database.repository | Saving Service Line details: AST-1768429-22106-46
+2026-06-29 10:04:20,529 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:20,529 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:20,543 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:20,543 | INFO     | src.database.repository | Service Line details saved: AST-1768429-22106-46
+2026-06-29 10:04:20,544 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-1768434-48766-62
+2026-06-29 10:04:21,216 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-1768434-48766-62
+2026-06-29 10:04:21,218 | INFO     | src.database.repository | Saving Service Line details: AST-1768434-48766-62
+2026-06-29 10:04:21,218 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:21,219 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:21,223 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:21,223 | INFO     | src.database.repository | Service Line details saved: AST-1768434-48766-62
+2026-06-29 10:04:21,223 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-2713247-67065-48
+2026-06-29 10:04:21,830 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-2713247-67065-48
+2026-06-29 10:04:21,831 | INFO     | src.database.repository | Saving Service Line details: AST-2713247-67065-48
+2026-06-29 10:04:21,831 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:21,831 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:21,847 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:21,847 | INFO     | src.database.repository | Service Line details saved: AST-2713247-67065-48
+2026-06-29 10:04:21,847 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-2713265-69251-47
+2026-06-29 10:04:22,445 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-2713265-69251-47
+2026-06-29 10:04:22,447 | INFO     | src.database.repository | Saving Service Line details: AST-2713265-69251-47
+2026-06-29 10:04:22,447 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:22,456 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:22,467 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:22,467 | INFO     | src.database.repository | Service Line details saved: AST-2713265-69251-47
+2026-06-29 10:04:22,467 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-2744393-35215-46
+2026-06-29 10:04:23,060 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-2744393-35215-46
+2026-06-29 10:04:23,062 | INFO     | src.database.repository | Saving Service Line details: AST-2744393-35215-46
+2026-06-29 10:04:23,062 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:23,063 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:23,073 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:23,073 | INFO     | src.database.repository | Service Line details saved: AST-2744393-35215-46
+2026-06-29 10:04:23,073 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-2823582-69427-56
+2026-06-29 10:04:23,576 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-2823582-69427-56
+2026-06-29 10:04:23,577 | INFO     | src.database.repository | Saving Service Line details: AST-2823582-69427-56
+2026-06-29 10:04:23,577 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:23,578 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:23,587 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:23,587 | INFO     | src.database.repository | Service Line details saved: AST-2823582-69427-56
+2026-06-29 10:04:23,587 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-3062613-25982-45
+2026-06-29 10:04:24,186 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-3062613-25982-45
+2026-06-29 10:04:24,187 | INFO     | src.database.repository | Saving Service Line details: AST-3062613-25982-45
+2026-06-29 10:04:24,187 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:24,188 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:24,198 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:24,198 | INFO     | src.database.repository | Service Line details saved: AST-3062613-25982-45
+2026-06-29 10:04:24,198 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1493579-34262-80
+2026-06-29 10:04:24,698 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1493579-34262-80
+2026-06-29 10:04:24,699 | INFO     | src.database.repository | Saving Service Line details: SL-1493579-34262-80
+2026-06-29 10:04:24,699 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:24,700 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:24,703 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:24,703 | INFO     | src.database.repository | Service Line details saved: SL-1493579-34262-80
+2026-06-29 10:04:24,703 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1494028-89832-83
+2026-06-29 10:04:25,457 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1494028-89832-83
+2026-06-29 10:04:25,458 | INFO     | src.database.repository | Saving Service Line details: SL-1494028-89832-83
+2026-06-29 10:04:25,458 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:25,459 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:25,470 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:25,470 | INFO     | src.database.repository | Service Line details saved: SL-1494028-89832-83
+2026-06-29 10:04:25,470 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1494501-21076-65
+2026-06-29 10:04:26,132 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1494501-21076-65
+2026-06-29 10:04:26,133 | INFO     | src.database.repository | Saving Service Line details: SL-1494501-21076-65
+2026-06-29 10:04:26,134 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:26,134 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:26,151 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:26,151 | INFO     | src.database.repository | Service Line details saved: SL-1494501-21076-65
+2026-06-29 10:04:26,151 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1744478-76049-86
+2026-06-29 10:04:26,671 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1744478-76049-86
+2026-06-29 10:04:26,672 | INFO     | src.database.repository | Saving Service Line details: SL-1744478-76049-86
+2026-06-29 10:04:26,672 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:26,673 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:26,683 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:26,683 | INFO     | src.database.repository | Service Line details saved: SL-1744478-76049-86
+2026-06-29 10:04:26,683 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1808826-10249-74
+2026-06-29 10:04:27,260 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1808826-10249-74
+2026-06-29 10:04:27,262 | INFO     | src.database.repository | Saving Service Line details: SL-1808826-10249-74
+2026-06-29 10:04:27,262 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:27,263 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:27,281 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:27,282 | INFO     | src.database.repository | Service Line details saved: SL-1808826-10249-74
+2026-06-29 10:04:27,282 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1982495-86954-95
+2026-06-29 10:04:27,884 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1982495-86954-95
+2026-06-29 10:04:27,887 | INFO     | src.database.repository | Saving Service Line details: SL-1982495-86954-95
+2026-06-29 10:04:27,887 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:27,888 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:27,903 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:27,904 | INFO     | src.database.repository | Service Line details saved: SL-1982495-86954-95
+2026-06-29 10:04:27,904 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1992576-45383-87
+2026-06-29 10:04:28,417 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1992576-45383-87
+2026-06-29 10:04:28,419 | INFO     | src.database.repository | Saving Service Line details: SL-1992576-45383-87
+2026-06-29 10:04:28,419 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:28,419 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:28,423 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:28,424 | INFO     | src.database.repository | Service Line details saved: SL-1992576-45383-87
+2026-06-29 10:04:28,424 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1992946-91099-93
+2026-06-29 10:04:28,928 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1992946-91099-93
+2026-06-29 10:04:28,931 | INFO     | src.database.repository | Saving Service Line details: SL-1992946-91099-93
+2026-06-29 10:04:28,931 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:28,932 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:28,951 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:28,951 | INFO     | src.database.repository | Service Line details saved: SL-1992946-91099-93
+2026-06-29 10:04:28,951 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1995916-23300-73
+2026-06-29 10:04:29,552 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1995916-23300-73
+2026-06-29 10:04:29,555 | INFO     | src.database.repository | Saving Service Line details: SL-1995916-23300-73
+2026-06-29 10:04:29,555 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:29,556 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:29,560 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:29,561 | INFO     | src.database.repository | Service Line details saved: SL-1995916-23300-73
+2026-06-29 10:04:29,561 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2008042-17553-62
+2026-06-29 10:04:30,089 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2008042-17553-62
+2026-06-29 10:04:30,092 | INFO     | src.database.repository | Saving Service Line details: SL-2008042-17553-62
+2026-06-29 10:04:30,092 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:30,092 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:30,105 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:30,105 | INFO     | src.database.repository | Service Line details saved: SL-2008042-17553-62
+2026-06-29 10:04:30,105 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2018059-62098-75
+2026-06-29 10:04:30,653 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2018059-62098-75
+2026-06-29 10:04:30,654 | INFO     | src.database.repository | Saving Service Line details: SL-2018059-62098-75
+2026-06-29 10:04:30,655 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:30,655 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:30,660 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:30,660 | INFO     | src.database.repository | Service Line details saved: SL-2018059-62098-75
+2026-06-29 10:04:30,660 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2063135-73813-67
+2026-06-29 10:04:31,177 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2063135-73813-67
+2026-06-29 10:04:31,180 | INFO     | src.database.repository | Saving Service Line details: SL-2063135-73813-67
+2026-06-29 10:04:31,180 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:31,180 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:31,192 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:31,192 | INFO     | src.database.repository | Service Line details saved: SL-2063135-73813-67
+2026-06-29 10:04:31,192 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2064043-74007-62
+2026-06-29 10:04:32,228 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2064043-74007-62
+2026-06-29 10:04:32,231 | INFO     | src.database.repository | Saving Service Line details: SL-2064043-74007-62
+2026-06-29 10:04:32,231 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:32,232 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:32,243 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:32,243 | INFO     | src.database.repository | Service Line details saved: SL-2064043-74007-62
+2026-06-29 10:04:32,243 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2064077-78510-72
+2026-06-29 10:04:33,051 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2064077-78510-72
+2026-06-29 10:04:33,054 | INFO     | src.database.repository | Saving Service Line details: SL-2064077-78510-72
+2026-06-29 10:04:33,054 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:33,055 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:33,059 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:33,060 | INFO     | src.database.repository | Service Line details saved: SL-2064077-78510-72
+2026-06-29 10:04:33,060 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2075603-61766-74
+2026-06-29 10:04:35,042 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2075603-61766-74
+2026-06-29 10:04:35,044 | INFO     | src.database.repository | Saving Service Line details: SL-2075603-61766-74
+2026-06-29 10:04:35,044 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:35,051 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:35,054 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:35,054 | INFO     | src.database.repository | Service Line details saved: SL-2075603-61766-74
+2026-06-29 10:04:35,054 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2077255-26096-76
+2026-06-29 10:04:35,642 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2077255-26096-76
+2026-06-29 10:04:35,644 | INFO     | src.database.repository | Saving Service Line details: SL-2077255-26096-76
+2026-06-29 10:04:35,644 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:35,645 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:35,655 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:35,655 | INFO     | src.database.repository | Service Line details saved: SL-2077255-26096-76
+2026-06-29 10:04:35,655 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2086022-35654-68
+2026-06-29 10:04:36,274 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2086022-35654-68
+2026-06-29 10:04:36,276 | INFO     | src.database.repository | Saving Service Line details: SL-2086022-35654-68
+2026-06-29 10:04:36,276 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:36,277 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:36,287 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:36,287 | INFO     | src.database.repository | Service Line details saved: SL-2086022-35654-68
+2026-06-29 10:04:36,287 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2088977-81757-94
+2026-06-29 10:04:36,979 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2088977-81757-94
+2026-06-29 10:04:36,981 | INFO     | src.database.repository | Saving Service Line details: SL-2088977-81757-94
+2026-06-29 10:04:36,981 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:36,981 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:36,985 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:36,985 | INFO     | src.database.repository | Service Line details saved: SL-2088977-81757-94
+2026-06-29 10:04:36,985 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2095446-46732-77
+2026-06-29 10:04:37,607 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2095446-46732-77
+2026-06-29 10:04:37,609 | INFO     | src.database.repository | Saving Service Line details: SL-2095446-46732-77
+2026-06-29 10:04:37,609 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:37,611 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:37,631 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:37,631 | INFO     | src.database.repository | Service Line details saved: SL-2095446-46732-77
+2026-06-29 10:04:37,631 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2099072-96444-81
+2026-06-29 10:04:38,215 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2099072-96444-81
+2026-06-29 10:04:38,216 | INFO     | src.database.repository | Saving Service Line details: SL-2099072-96444-81
+2026-06-29 10:04:38,216 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:38,217 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:38,232 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:38,233 | INFO     | src.database.repository | Service Line details saved: SL-2099072-96444-81
+2026-06-29 10:04:38,233 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2107959-73576-86
+2026-06-29 10:04:38,809 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2107959-73576-86
+2026-06-29 10:04:38,811 | INFO     | src.database.repository | Saving Service Line details: SL-2107959-73576-86
+2026-06-29 10:04:38,811 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:38,812 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:38,816 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:38,816 | INFO     | src.database.repository | Service Line details saved: SL-2107959-73576-86
+2026-06-29 10:04:38,816 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2109823-23870-70
+2026-06-29 10:04:39,486 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2109823-23870-70
+2026-06-29 10:04:39,488 | INFO     | src.database.repository | Saving Service Line details: SL-2109823-23870-70
+2026-06-29 10:04:39,488 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:39,489 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:39,493 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:39,493 | INFO     | src.database.repository | Service Line details saved: SL-2109823-23870-70
+2026-06-29 10:04:39,493 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2146664-58949-89
+2026-06-29 10:04:40,034 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2146664-58949-89
+2026-06-29 10:04:40,035 | INFO     | src.database.repository | Saving Service Line details: SL-2146664-58949-89
+2026-06-29 10:04:40,036 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:40,036 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:40,045 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:40,045 | INFO     | src.database.repository | Service Line details saved: SL-2146664-58949-89
+2026-06-29 10:04:40,045 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2149793-39810-81
+2026-06-29 10:04:40,545 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2149793-39810-81
+2026-06-29 10:04:40,548 | INFO     | src.database.repository | Saving Service Line details: SL-2149793-39810-81
+2026-06-29 10:04:40,548 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:40,549 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:40,553 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:40,553 | INFO     | src.database.repository | Service Line details saved: SL-2149793-39810-81
+2026-06-29 10:04:40,553 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2151016-22487-64
+2026-06-29 10:04:41,091 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2151016-22487-64
+2026-06-29 10:04:41,092 | INFO     | src.database.repository | Saving Service Line details: SL-2151016-22487-64
+2026-06-29 10:04:41,092 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:41,093 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:41,097 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:41,097 | INFO     | src.database.repository | Service Line details saved: SL-2151016-22487-64
+2026-06-29 10:04:41,097 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2153530-62552-64
+2026-06-29 10:04:42,314 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2153530-62552-64
+2026-06-29 10:04:42,317 | INFO     | src.database.repository | Saving Service Line details: SL-2153530-62552-64
+2026-06-29 10:04:42,317 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:42,318 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:42,328 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:42,329 | INFO     | src.database.repository | Service Line details saved: SL-2153530-62552-64
+2026-06-29 10:04:42,329 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2160190-33919-69
+2026-06-29 10:04:42,830 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2160190-33919-69
+2026-06-29 10:04:42,833 | INFO     | src.database.repository | Saving Service Line details: SL-2160190-33919-69
+2026-06-29 10:04:42,833 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:42,833 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:42,845 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:42,845 | INFO     | src.database.repository | Service Line details saved: SL-2160190-33919-69
+2026-06-29 10:04:42,845 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2160428-84867-81
+2026-06-29 10:04:43,311 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2160428-84867-81
+2026-06-29 10:04:43,312 | INFO     | src.database.repository | Saving Service Line details: SL-2160428-84867-81
+2026-06-29 10:04:43,313 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:43,313 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:43,323 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:43,323 | INFO     | src.database.repository | Service Line details saved: SL-2160428-84867-81
+2026-06-29 10:04:43,323 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2162652-18200-60
+2026-06-29 10:04:44,054 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2162652-18200-60
+2026-06-29 10:04:44,055 | INFO     | src.database.repository | Saving Service Line details: SL-2162652-18200-60
+2026-06-29 10:04:44,055 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:44,056 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:44,066 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:44,066 | INFO     | src.database.repository | Service Line details saved: SL-2162652-18200-60
+2026-06-29 10:04:44,066 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2172503-11389-67
+2026-06-29 10:04:44,587 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2172503-11389-67
+2026-06-29 10:04:44,589 | INFO     | src.database.repository | Saving Service Line details: SL-2172503-11389-67
+2026-06-29 10:04:44,589 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:44,589 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:44,599 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:44,600 | INFO     | src.database.repository | Service Line details saved: SL-2172503-11389-67
+2026-06-29 10:04:44,600 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2250439-40369-72
+2026-06-29 10:04:45,049 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2250439-40369-72
+2026-06-29 10:04:45,051 | INFO     | src.database.repository | Saving Service Line details: SL-2250439-40369-72
+2026-06-29 10:04:45,051 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:45,052 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:45,060 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:45,061 | INFO     | src.database.repository | Service Line details saved: SL-2250439-40369-72
+2026-06-29 10:04:45,061 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2360594-13968-81
+2026-06-29 10:04:45,524 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2360594-13968-81
+2026-06-29 10:04:45,527 | INFO     | src.database.repository | Saving Service Line details: SL-2360594-13968-81
+2026-06-29 10:04:45,527 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:45,528 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:45,537 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:45,537 | INFO     | src.database.repository | Service Line details saved: SL-2360594-13968-81
+2026-06-29 10:04:45,537 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2386360-80177-76
+2026-06-29 10:04:46,101 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2386360-80177-76
+2026-06-29 10:04:46,102 | INFO     | src.database.repository | Saving Service Line details: SL-2386360-80177-76
+2026-06-29 10:04:46,103 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:46,103 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:46,113 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:46,113 | INFO     | src.database.repository | Service Line details saved: SL-2386360-80177-76
+2026-06-29 10:04:46,113 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2386581-36620-75
+2026-06-29 10:04:46,819 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2386581-36620-75
+2026-06-29 10:04:46,821 | INFO     | src.database.repository | Saving Service Line details: SL-2386581-36620-75
+2026-06-29 10:04:46,821 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:46,821 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:46,833 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:46,833 | INFO     | src.database.repository | Service Line details saved: SL-2386581-36620-75
+2026-06-29 10:04:46,833 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2429607-25076-75
+2026-06-29 10:04:47,842 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2429607-25076-75
+2026-06-29 10:04:47,844 | INFO     | src.database.repository | Saving Service Line details: SL-2429607-25076-75
+2026-06-29 10:04:47,844 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:47,845 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:47,855 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:47,855 | INFO     | src.database.repository | Service Line details saved: SL-2429607-25076-75
+2026-06-29 10:04:47,855 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2440738-51926-76
+2026-06-29 10:04:48,896 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2440738-51926-76
+2026-06-29 10:04:48,898 | INFO     | src.database.repository | Saving Service Line details: SL-2440738-51926-76
+2026-06-29 10:04:48,898 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:48,899 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:48,917 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:48,917 | INFO     | src.database.repository | Service Line details saved: SL-2440738-51926-76
+2026-06-29 10:04:48,917 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2453162-17257-70
+2026-06-29 10:04:49,482 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2453162-17257-70
+2026-06-29 10:04:49,484 | INFO     | src.database.repository | Saving Service Line details: SL-2453162-17257-70
+2026-06-29 10:04:49,484 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:49,485 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:49,497 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:49,497 | INFO     | src.database.repository | Service Line details saved: SL-2453162-17257-70
+2026-06-29 10:04:49,497 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2570147-97710-75
+2026-06-29 10:04:49,996 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2570147-97710-75
+2026-06-29 10:04:49,997 | INFO     | src.database.repository | Saving Service Line details: SL-2570147-97710-75
+2026-06-29 10:04:49,998 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:49,998 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:50,031 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:50,031 | INFO     | src.database.repository | Service Line details saved: SL-2570147-97710-75
+2026-06-29 10:04:50,032 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2734900-39685-81
+2026-06-29 10:04:50,542 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2734900-39685-81
+2026-06-29 10:04:50,544 | INFO     | src.database.repository | Saving Service Line details: SL-2734900-39685-81
+2026-06-29 10:04:50,544 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:50,545 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:50,570 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:50,570 | INFO     | src.database.repository | Service Line details saved: SL-2734900-39685-81
+2026-06-29 10:04:50,570 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2847330-92676-82
+2026-06-29 10:04:51,064 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2847330-92676-82
+2026-06-29 10:04:51,066 | INFO     | src.database.repository | Saving Service Line details: SL-2847330-92676-82
+2026-06-29 10:04:51,066 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:51,067 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:51,098 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:51,098 | INFO     | src.database.repository | Service Line details saved: SL-2847330-92676-82
+2026-06-29 10:04:51,098 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2983310-76960-79
+2026-06-29 10:04:51,645 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2983310-76960-79
+2026-06-29 10:04:51,647 | INFO     | src.database.repository | Saving Service Line details: SL-2983310-76960-79
+2026-06-29 10:04:51,648 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:51,648 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:51,686 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:51,686 | INFO     | src.database.repository | Service Line details saved: SL-2983310-76960-79
+2026-06-29 10:04:51,686 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-3316341-17070-61
+2026-06-29 10:04:52,248 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-3316341-17070-61
+2026-06-29 10:04:52,252 | INFO     | src.database.repository | Saving Service Line details: SL-3316341-17070-61
+2026-06-29 10:04:52,252 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:04:52,253 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:04:52,286 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:04:52,286 | INFO     | src.database.repository | Service Line details saved: SL-3316341-17070-61
+2026-06-29 10:05:17,295 | INFO     | src.excel.exporter | Loading report data...
+2026-06-29 10:05:17,296 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:17,296 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:17,334 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:17,335 | INFO     | src.excel.exporter | 50 rows loaded.
+2026-06-29 10:05:17,335 | INFO     | src.excel.exporter | Generating Excel: exports\Holonet_20260629_100517.xlsx
+2026-06-29 10:05:17,508 | INFO     | src.excel.exporter | Excel generated successfully.
+2026-06-29 10:05:18,509 | INFO     | src.api.auth | Requesting Starlink OAuth token...
+2026-06-29 10:05:19,039 | INFO     | src.api.auth | OAuth token obtained successfully.
+2026-06-29 10:05:19,041 | INFO     | src.api.starlink_client | Retrieving Starlink products...
+2026-06-29 10:05:19,792 | INFO     | src.api.starlink_client | Products retrieved successfully.
+2026-06-29 10:05:19,794 | INFO     | src.database.repository | Saving 2 products...
+2026-06-29 10:05:19,794 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:19,794 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:19,813 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:19,813 | INFO     | src.database.repository | Products saved successfully.
+2026-06-29 10:05:19,814 | INFO     | src.api.starlink_client | Retrieving Starlink usage...
+2026-06-29 10:05:20,471 | INFO     | src.api.starlink_client | Usage retrieved successfully.
+2026-06-29 10:05:20,481 | INFO     | src.database.repository | Processing 50 service lines...
+2026-06-29 10:05:20,481 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:20,482 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:20,739 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:20,739 | INFO     | src.database.repository | Usage saved successfully.
+2026-06-29 10:05:20,739 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-1768423-85100-43
+2026-06-29 10:05:21,332 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-1768423-85100-43
+2026-06-29 10:05:21,334 | INFO     | src.database.repository | Saving Service Line details: AST-1768423-85100-43
+2026-06-29 10:05:21,334 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:21,335 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:21,346 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:21,346 | INFO     | src.database.repository | Service Line details saved: AST-1768423-85100-43
+2026-06-29 10:05:21,346 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-1768429-22106-46
+2026-06-29 10:05:22,046 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-1768429-22106-46
+2026-06-29 10:05:22,048 | INFO     | src.database.repository | Saving Service Line details: AST-1768429-22106-46
+2026-06-29 10:05:22,048 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:22,049 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:22,063 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:22,063 | INFO     | src.database.repository | Service Line details saved: AST-1768429-22106-46
+2026-06-29 10:05:22,063 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-1768434-48766-62
+2026-06-29 10:05:22,661 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-1768434-48766-62
+2026-06-29 10:05:22,662 | INFO     | src.database.repository | Saving Service Line details: AST-1768434-48766-62
+2026-06-29 10:05:22,663 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:22,663 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:22,667 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:22,667 | INFO     | src.database.repository | Service Line details saved: AST-1768434-48766-62
+2026-06-29 10:05:22,667 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-2713247-67065-48
+2026-06-29 10:05:23,273 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-2713247-67065-48
+2026-06-29 10:05:23,276 | INFO     | src.database.repository | Saving Service Line details: AST-2713247-67065-48
+2026-06-29 10:05:23,276 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:23,277 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:23,292 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:23,292 | INFO     | src.database.repository | Service Line details saved: AST-2713247-67065-48
+2026-06-29 10:05:23,292 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-2713265-69251-47
+2026-06-29 10:05:23,890 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-2713265-69251-47
+2026-06-29 10:05:23,893 | INFO     | src.database.repository | Saving Service Line details: AST-2713265-69251-47
+2026-06-29 10:05:23,893 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:23,894 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:23,910 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:23,911 | INFO     | src.database.repository | Service Line details saved: AST-2713265-69251-47
+2026-06-29 10:05:23,911 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-2744393-35215-46
+2026-06-29 10:05:24,506 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-2744393-35215-46
+2026-06-29 10:05:24,508 | INFO     | src.database.repository | Saving Service Line details: AST-2744393-35215-46
+2026-06-29 10:05:24,508 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:24,509 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:24,524 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:24,525 | INFO     | src.database.repository | Service Line details saved: AST-2744393-35215-46
+2026-06-29 10:05:24,525 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-2823582-69427-56
+2026-06-29 10:05:25,224 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-2823582-69427-56
+2026-06-29 10:05:25,226 | INFO     | src.database.repository | Saving Service Line details: AST-2823582-69427-56
+2026-06-29 10:05:25,227 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:25,227 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:25,238 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:25,238 | INFO     | src.database.repository | Service Line details saved: AST-2823582-69427-56
+2026-06-29 10:05:25,238 | INFO     | src.api.starlink_client | Retrieving Service Line details: AST-3062613-25982-45
+2026-06-29 10:05:25,768 | INFO     | src.api.starlink_client | Service Line details retrieved: AST-3062613-25982-45
+2026-06-29 10:05:25,770 | INFO     | src.database.repository | Saving Service Line details: AST-3062613-25982-45
+2026-06-29 10:05:25,770 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:25,770 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:25,778 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:25,778 | INFO     | src.database.repository | Service Line details saved: AST-3062613-25982-45
+2026-06-29 10:05:25,778 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1493579-34262-80
+2026-06-29 10:05:26,476 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1493579-34262-80
+2026-06-29 10:05:26,478 | INFO     | src.database.repository | Saving Service Line details: SL-1493579-34262-80
+2026-06-29 10:05:26,478 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:26,479 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:26,491 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:26,491 | INFO     | src.database.repository | Service Line details saved: SL-1493579-34262-80
+2026-06-29 10:05:26,491 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1494028-89832-83
+2026-06-29 10:05:28,089 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1494028-89832-83
+2026-06-29 10:05:28,091 | INFO     | src.database.repository | Saving Service Line details: SL-1494028-89832-83
+2026-06-29 10:05:28,092 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:28,092 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:28,103 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:28,104 | INFO     | src.database.repository | Service Line details saved: SL-1494028-89832-83
+2026-06-29 10:05:28,104 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1494501-21076-65
+2026-06-29 10:05:28,808 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1494501-21076-65
+2026-06-29 10:05:28,810 | INFO     | src.database.repository | Saving Service Line details: SL-1494501-21076-65
+2026-06-29 10:05:28,810 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:28,810 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:28,825 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:28,825 | INFO     | src.database.repository | Service Line details saved: SL-1494501-21076-65
+2026-06-29 10:05:28,825 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1744478-76049-86
+2026-06-29 10:05:29,322 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1744478-76049-86
+2026-06-29 10:05:29,324 | INFO     | src.database.repository | Saving Service Line details: SL-1744478-76049-86
+2026-06-29 10:05:29,325 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:29,325 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:29,330 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:29,330 | INFO     | src.database.repository | Service Line details saved: SL-1744478-76049-86
+2026-06-29 10:05:29,330 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1808826-10249-74
+2026-06-29 10:05:29,957 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1808826-10249-74
+2026-06-29 10:05:29,960 | INFO     | src.database.repository | Saving Service Line details: SL-1808826-10249-74
+2026-06-29 10:05:29,960 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:29,961 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:29,971 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:29,971 | INFO     | src.database.repository | Service Line details saved: SL-1808826-10249-74
+2026-06-29 10:05:29,972 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1982495-86954-95
+2026-06-29 10:05:30,489 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1982495-86954-95
+2026-06-29 10:05:30,491 | INFO     | src.database.repository | Saving Service Line details: SL-1982495-86954-95
+2026-06-29 10:05:30,491 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:30,492 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:30,502 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:30,502 | INFO     | src.database.repository | Service Line details saved: SL-1982495-86954-95
+2026-06-29 10:05:30,502 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1992576-45383-87
+2026-06-29 10:05:31,088 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1992576-45383-87
+2026-06-29 10:05:31,091 | INFO     | src.database.repository | Saving Service Line details: SL-1992576-45383-87
+2026-06-29 10:05:31,091 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:31,092 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:31,097 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:31,097 | INFO     | src.database.repository | Service Line details saved: SL-1992576-45383-87
+2026-06-29 10:05:31,097 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1992946-91099-93
+2026-06-29 10:05:31,609 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1992946-91099-93
+2026-06-29 10:05:31,612 | INFO     | src.database.repository | Saving Service Line details: SL-1992946-91099-93
+2026-06-29 10:05:31,612 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:31,612 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:31,624 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:31,624 | INFO     | src.database.repository | Service Line details saved: SL-1992946-91099-93
+2026-06-29 10:05:31,624 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-1995916-23300-73
+2026-06-29 10:05:32,716 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-1995916-23300-73
+2026-06-29 10:05:32,718 | INFO     | src.database.repository | Saving Service Line details: SL-1995916-23300-73
+2026-06-29 10:05:32,718 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:32,718 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:32,729 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:32,729 | INFO     | src.database.repository | Service Line details saved: SL-1995916-23300-73
+2026-06-29 10:05:32,729 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2008042-17553-62
+2026-06-29 10:05:34,336 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2008042-17553-62
+2026-06-29 10:05:34,338 | INFO     | src.database.repository | Saving Service Line details: SL-2008042-17553-62
+2026-06-29 10:05:34,338 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:34,339 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:34,353 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:34,353 | INFO     | src.database.repository | Service Line details saved: SL-2008042-17553-62
+2026-06-29 10:05:34,353 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2018059-62098-75
+2026-06-29 10:05:34,915 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2018059-62098-75
+2026-06-29 10:05:34,917 | INFO     | src.database.repository | Saving Service Line details: SL-2018059-62098-75
+2026-06-29 10:05:34,917 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:34,918 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:34,923 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:34,923 | INFO     | src.database.repository | Service Line details saved: SL-2018059-62098-75
+2026-06-29 10:05:34,924 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2063135-73813-67
+2026-06-29 10:05:35,548 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2063135-73813-67
+2026-06-29 10:05:35,549 | INFO     | src.database.repository | Saving Service Line details: SL-2063135-73813-67
+2026-06-29 10:05:35,549 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:35,550 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:35,568 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:35,568 | INFO     | src.database.repository | Service Line details saved: SL-2063135-73813-67
+2026-06-29 10:05:35,568 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2064043-74007-62
+2026-06-29 10:05:36,064 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2064043-74007-62
+2026-06-29 10:05:36,066 | INFO     | src.database.repository | Saving Service Line details: SL-2064043-74007-62
+2026-06-29 10:05:36,066 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:36,067 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:36,083 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:36,083 | INFO     | src.database.repository | Service Line details saved: SL-2064043-74007-62
+2026-06-29 10:05:36,083 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2064077-78510-72
+2026-06-29 10:05:37,100 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2064077-78510-72
+2026-06-29 10:05:37,101 | INFO     | src.database.repository | Saving Service Line details: SL-2064077-78510-72
+2026-06-29 10:05:37,101 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:37,102 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:37,119 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:37,119 | INFO     | src.database.repository | Service Line details saved: SL-2064077-78510-72
+2026-06-29 10:05:37,119 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2075603-61766-74
+2026-06-29 10:05:37,923 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2075603-61766-74
+2026-06-29 10:05:37,925 | INFO     | src.database.repository | Saving Service Line details: SL-2075603-61766-74
+2026-06-29 10:05:37,925 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:37,925 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:37,935 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:37,935 | INFO     | src.database.repository | Service Line details saved: SL-2075603-61766-74
+2026-06-29 10:05:37,936 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2077255-26096-76
+2026-06-29 10:05:38,638 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2077255-26096-76
+2026-06-29 10:05:38,639 | INFO     | src.database.repository | Saving Service Line details: SL-2077255-26096-76
+2026-06-29 10:05:38,639 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:38,640 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:38,650 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:38,650 | INFO     | src.database.repository | Service Line details saved: SL-2077255-26096-76
+2026-06-29 10:05:38,650 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2086022-35654-68
+2026-06-29 10:05:39,255 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2086022-35654-68
+2026-06-29 10:05:39,257 | INFO     | src.database.repository | Saving Service Line details: SL-2086022-35654-68
+2026-06-29 10:05:39,258 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:39,258 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:39,268 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:39,269 | INFO     | src.database.repository | Service Line details saved: SL-2086022-35654-68
+2026-06-29 10:05:39,269 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2088977-81757-94
+2026-06-29 10:05:39,790 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2088977-81757-94
+2026-06-29 10:05:39,792 | INFO     | src.database.repository | Saving Service Line details: SL-2088977-81757-94
+2026-06-29 10:05:39,793 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:39,793 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:39,798 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:39,799 | INFO     | src.database.repository | Service Line details saved: SL-2088977-81757-94
+2026-06-29 10:05:39,799 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2095446-46732-77
+2026-06-29 10:05:40,315 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2095446-46732-77
+2026-06-29 10:05:40,317 | INFO     | src.database.repository | Saving Service Line details: SL-2095446-46732-77
+2026-06-29 10:05:40,318 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:40,318 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:40,330 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:40,330 | INFO     | src.database.repository | Service Line details saved: SL-2095446-46732-77
+2026-06-29 10:05:40,330 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2099072-96444-81
+2026-06-29 10:05:40,906 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2099072-96444-81
+2026-06-29 10:05:40,908 | INFO     | src.database.repository | Saving Service Line details: SL-2099072-96444-81
+2026-06-29 10:05:40,908 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:40,909 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:40,925 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:40,925 | INFO     | src.database.repository | Service Line details saved: SL-2099072-96444-81
+2026-06-29 10:05:40,925 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2107959-73576-86
+2026-06-29 10:05:41,386 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2107959-73576-86
+2026-06-29 10:05:41,389 | INFO     | src.database.repository | Saving Service Line details: SL-2107959-73576-86
+2026-06-29 10:05:41,389 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:41,389 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:41,398 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:41,398 | INFO     | src.database.repository | Service Line details saved: SL-2107959-73576-86
+2026-06-29 10:05:41,398 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2109823-23870-70
+2026-06-29 10:05:42,128 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2109823-23870-70
+2026-06-29 10:05:42,129 | INFO     | src.database.repository | Saving Service Line details: SL-2109823-23870-70
+2026-06-29 10:05:42,130 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:42,130 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:42,133 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:42,133 | INFO     | src.database.repository | Service Line details saved: SL-2109823-23870-70
+2026-06-29 10:05:42,133 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2146664-58949-89
+2026-06-29 10:05:42,698 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2146664-58949-89
+2026-06-29 10:05:42,699 | INFO     | src.database.repository | Saving Service Line details: SL-2146664-58949-89
+2026-06-29 10:05:42,699 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:42,700 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:42,704 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:42,704 | INFO     | src.database.repository | Service Line details saved: SL-2146664-58949-89
+2026-06-29 10:05:42,704 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2149793-39810-81
+2026-06-29 10:05:43,256 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2149793-39810-81
+2026-06-29 10:05:43,259 | INFO     | src.database.repository | Saving Service Line details: SL-2149793-39810-81
+2026-06-29 10:05:43,259 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:43,260 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:43,270 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:43,271 | INFO     | src.database.repository | Service Line details saved: SL-2149793-39810-81
+2026-06-29 10:05:43,271 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2151016-22487-64
+2026-06-29 10:05:43,860 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2151016-22487-64
+2026-06-29 10:05:43,863 | INFO     | src.database.repository | Saving Service Line details: SL-2151016-22487-64
+2026-06-29 10:05:43,863 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:43,864 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:43,870 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:43,870 | INFO     | src.database.repository | Service Line details saved: SL-2151016-22487-64
+2026-06-29 10:05:43,870 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2153530-62552-64
+2026-06-29 10:05:44,580 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2153530-62552-64
+2026-06-29 10:05:44,581 | INFO     | src.database.repository | Saving Service Line details: SL-2153530-62552-64
+2026-06-29 10:05:44,581 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:44,582 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:44,586 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:44,586 | INFO     | src.database.repository | Service Line details saved: SL-2153530-62552-64
+2026-06-29 10:05:44,586 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2160190-33919-69
+2026-06-29 10:05:45,190 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2160190-33919-69
+2026-06-29 10:05:45,193 | INFO     | src.database.repository | Saving Service Line details: SL-2160190-33919-69
+2026-06-29 10:05:45,193 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:45,194 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:45,200 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:45,200 | INFO     | src.database.repository | Service Line details saved: SL-2160190-33919-69
+2026-06-29 10:05:45,200 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2160428-84867-81
+2026-06-29 10:05:45,747 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2160428-84867-81
+2026-06-29 10:05:45,751 | INFO     | src.database.repository | Saving Service Line details: SL-2160428-84867-81
+2026-06-29 10:05:45,751 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:45,752 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:45,760 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:45,760 | INFO     | src.database.repository | Service Line details saved: SL-2160428-84867-81
+2026-06-29 10:05:45,760 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2162652-18200-60
+2026-06-29 10:05:46,319 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2162652-18200-60
+2026-06-29 10:05:46,322 | INFO     | src.database.repository | Saving Service Line details: SL-2162652-18200-60
+2026-06-29 10:05:46,322 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:46,323 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:46,326 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:46,327 | INFO     | src.database.repository | Service Line details saved: SL-2162652-18200-60
+2026-06-29 10:05:46,327 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2172503-11389-67
+2026-06-29 10:05:46,937 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2172503-11389-67
+2026-06-29 10:05:46,939 | INFO     | src.database.repository | Saving Service Line details: SL-2172503-11389-67
+2026-06-29 10:05:46,940 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:46,941 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:46,946 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:46,946 | INFO     | src.database.repository | Service Line details saved: SL-2172503-11389-67
+2026-06-29 10:05:46,947 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2250439-40369-72
+2026-06-29 10:05:47,470 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2250439-40369-72
+2026-06-29 10:05:47,472 | INFO     | src.database.repository | Saving Service Line details: SL-2250439-40369-72
+2026-06-29 10:05:47,472 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:47,473 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:47,478 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:47,478 | INFO     | src.database.repository | Service Line details saved: SL-2250439-40369-72
+2026-06-29 10:05:47,478 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2360594-13968-81
+2026-06-29 10:05:47,997 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2360594-13968-81
+2026-06-29 10:05:47,999 | INFO     | src.database.repository | Saving Service Line details: SL-2360594-13968-81
+2026-06-29 10:05:48,000 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:48,001 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:48,007 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:48,007 | INFO     | src.database.repository | Service Line details saved: SL-2360594-13968-81
+2026-06-29 10:05:48,007 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2386360-80177-76
+2026-06-29 10:05:48,514 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2386360-80177-76
+2026-06-29 10:05:48,516 | INFO     | src.database.repository | Saving Service Line details: SL-2386360-80177-76
+2026-06-29 10:05:48,516 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:48,517 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:48,520 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:48,520 | INFO     | src.database.repository | Service Line details saved: SL-2386360-80177-76
+2026-06-29 10:05:48,520 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2386581-36620-75
+2026-06-29 10:05:49,156 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2386581-36620-75
+2026-06-29 10:05:49,159 | INFO     | src.database.repository | Saving Service Line details: SL-2386581-36620-75
+2026-06-29 10:05:49,159 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:49,160 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:49,177 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:49,177 | INFO     | src.database.repository | Service Line details saved: SL-2386581-36620-75
+2026-06-29 10:05:49,177 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2429607-25076-75
+2026-06-29 10:05:49,703 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2429607-25076-75
+2026-06-29 10:05:49,705 | INFO     | src.database.repository | Saving Service Line details: SL-2429607-25076-75
+2026-06-29 10:05:49,705 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:49,706 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:49,722 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:49,722 | INFO     | src.database.repository | Service Line details saved: SL-2429607-25076-75
+2026-06-29 10:05:49,722 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2440738-51926-76
+2026-06-29 10:05:51,511 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2440738-51926-76
+2026-06-29 10:05:51,512 | INFO     | src.database.repository | Saving Service Line details: SL-2440738-51926-76
+2026-06-29 10:05:51,513 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:51,513 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:51,524 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:51,525 | INFO     | src.database.repository | Service Line details saved: SL-2440738-51926-76
+2026-06-29 10:05:51,525 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2453162-17257-70
+2026-06-29 10:05:52,256 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2453162-17257-70
+2026-06-29 10:05:52,258 | INFO     | src.database.repository | Saving Service Line details: SL-2453162-17257-70
+2026-06-29 10:05:52,258 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:52,259 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:52,269 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:52,269 | INFO     | src.database.repository | Service Line details saved: SL-2453162-17257-70
+2026-06-29 10:05:52,269 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2570147-97710-75
+2026-06-29 10:05:52,871 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2570147-97710-75
+2026-06-29 10:05:52,872 | INFO     | src.database.repository | Saving Service Line details: SL-2570147-97710-75
+2026-06-29 10:05:52,872 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:52,873 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:52,882 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:52,883 | INFO     | src.database.repository | Service Line details saved: SL-2570147-97710-75
+2026-06-29 10:05:52,883 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2734900-39685-81
+2026-06-29 10:05:53,486 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2734900-39685-81
+2026-06-29 10:05:53,488 | INFO     | src.database.repository | Saving Service Line details: SL-2734900-39685-81
+2026-06-29 10:05:53,489 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:53,489 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:53,505 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:53,505 | INFO     | src.database.repository | Service Line details saved: SL-2734900-39685-81
+2026-06-29 10:05:53,506 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2847330-92676-82
+2026-06-29 10:05:54,101 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2847330-92676-82
+2026-06-29 10:05:54,103 | INFO     | src.database.repository | Saving Service Line details: SL-2847330-92676-82
+2026-06-29 10:05:54,103 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:54,103 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:54,113 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:54,113 | INFO     | src.database.repository | Service Line details saved: SL-2847330-92676-82
+2026-06-29 10:05:54,113 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-2983310-76960-79
+2026-06-29 10:05:54,923 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-2983310-76960-79
+2026-06-29 10:05:54,925 | INFO     | src.database.repository | Saving Service Line details: SL-2983310-76960-79
+2026-06-29 10:05:54,926 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:54,926 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:54,931 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:54,931 | INFO     | src.database.repository | Service Line details saved: SL-2983310-76960-79
+2026-06-29 10:05:54,931 | INFO     | src.api.starlink_client | Retrieving Service Line details: SL-3316341-17070-61
+2026-06-29 10:05:55,540 | INFO     | src.api.starlink_client | Service Line details retrieved: SL-3316341-17070-61
+2026-06-29 10:05:55,542 | INFO     | src.database.repository | Saving Service Line details: SL-3316341-17070-61
+2026-06-29 10:05:55,542 | INFO     | src.database.connection | Connecting to SQL Server...
+2026-06-29 10:05:55,543 | INFO     | src.database.connection | Connected successfully.
+2026-06-29 10:05:55,578 | INFO     | src.database.connection | SQL Server connection closed.
+2026-06-29 10:05:55,578 | INFO     | src.database.repository | Service Line details saved: SL-3316341-17070-61

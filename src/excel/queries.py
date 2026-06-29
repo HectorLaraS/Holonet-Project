@@ -10,6 +10,8 @@ SELECT
     u.account_number,
     u.service_line_number,
 
+    sld.nickname,
+
     p.product_name,
 
     u.product_id,
@@ -45,6 +47,10 @@ FROM starlink.usage_current u
 LEFT JOIN starlink.products p
 
     ON u.product_id = p.product_id
+
+LEFT JOIN starlink.service_line_details sld
+
+    ON u.service_line_number = sld.service_line_number
 
 LEFT JOIN starlink.data_blocks_current d
 
