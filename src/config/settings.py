@@ -43,13 +43,17 @@ class Settings:
 
     api_base_url = os.getenv("STARLINK_API_BASE_URL")
 
-    client_id = os.getenv("STARLINK_CLIENT_ID")
-
     client_secret = os.getenv("STARLINK_CLIENT_SECRET")
 
     timeout = int(
         os.getenv("API_TIMEOUT", "30")
     )
+
+    starlink_clients = {
+        "US": os.getenv("STARLINK_CLIENT_ID_US"),
+        "CA": os.getenv("STARLINK_CLIENT_ID_CA"),
+        "MX": os.getenv("STARLINK_CLIENT_ID_MX")
+    }
 
     # -------------------------------------------------------------------------
     # Reports
@@ -60,11 +64,26 @@ class Settings:
         "./exports"
     )
 
-    POLL_INTERVAL_SECONDS = int(os.getenv("POLL_INTERVAL_SECONDS","300"))
+    POLL_INTERVAL_SECONDS = int(
+        os.getenv(
+            "POLL_INTERVAL_SECONDS",
+            "300"
+        )
+    )
 
-    REPORT_INTERVAL_SECONDS = int(os.getenv("REPORT_INTERVAL_SECONDS","43200"))
+    REPORT_INTERVAL_SECONDS = int(
+        os.getenv(
+            "REPORT_INTERVAL_SECONDS",
+            "43200"
+        )
+    )
 
-    SERVICE_RESTART_DELAY_SECONDS = int(os.getenv("SERVICE_RESTART_DELAY_SECONDS","5"))
+    SERVICE_RESTART_DELAY_SECONDS = int(
+        os.getenv(
+            "SERVICE_RESTART_DELAY_SECONDS",
+            "5"
+        )
+    )
 
 
 settings = Settings()

@@ -6,56 +6,67 @@ Main Entry Point
 
 from src.api.auth import AuthClient
 from src.api.starlink_client import StarlinkClient
+from src.config.settings import settings
 from src.database.repository import Repository
 from src.excel.exporter import ExcelExporter
 
 
 def run_poll() -> None:
     """
-    Retrieves information from Starlink
-    and stores it in SQL Server.
+    Retrieves information from all configured
+    Starlink accounts and stores it in SQL Server.
     """
-
-    auth = AuthClient()
-
-    token = auth.authenticate()
-
-    client = StarlinkClient(token)
 
     repository = Repository()
 
-    print()
-    print("Retrieving Products...")
+    for country, client_id in settings.starlink_clients.items():
 
-    products = client.get_products()
+        if not client_id:
+            continue
 
-    repository.save_products(products)
+        print()
+        print("=" * 50)
+        print(f"Processing Starlink Account: {country}")
+        print("=" * 50)
 
-    print("Products updated successfully.")
+        auth = AuthClient(client_id)
 
-    print()
-    print("Retrieving Usage...")
+        token = auth.authenticate()
 
-    usage = client.get_usage()
+        client = StarlinkClient(token)
 
-    repository.save_usage(usage)
+        print()
+        print("Retrieving Products...")
 
-    print("Usage updated successfully.")
+        products = client.get_products()
 
-    print()
-    print("Retrieving Service Line Details...")
+        repository.save_products(products)
 
-    for service_line in usage["content"]["results"]:
+        print("Products updated successfully.")
 
-        details = client.get_service_line(
-            service_line["serviceLineNumber"]
-        )
+        print()
+        print("Retrieving Usage...")
 
-        repository.save_service_line_details(
-            details
-        )
+        usage = client.get_usage()
 
-    print("Service Line Details updated successfully.")
+        repository.save_usage(usage)
+
+        print("Usage updated successfully.")
+
+        print()
+        print("Retrieving Service Line Details...")
+
+        for service_line in usage["content"]["results"]:
+
+            details = client.get_service_line(
+                service_line["serviceLineNumber"]
+            )
+
+            repository.save_service_line_details(
+                details
+            )
+
+        print("Service Line Details updated successfully.")
 
 
 def run_report() -> None:

@@ -19,11 +19,14 @@ class AuthClient:
     Handles authentication against the Starlink OAuth API.
     """
 
-    def __init__(self):
+    def __init__(
+        self,
+        client_id: str
+    ):
 
         self.auth_url = settings.auth_url
 
-        self.client_id = settings.client_id
+        self.client_id = client_id
 
         self.client_secret = settings.client_secret
 
@@ -40,7 +43,8 @@ class AuthClient:
         """
 
         logger.info(
-            "Requesting Starlink OAuth token..."
+            f"Requesting Starlink OAuth token "
+            f"for client '{self.client_id}'..."
         )
 
         payload = {
@@ -65,7 +69,8 @@ class AuthClient:
         token = response.json()["access_token"]
 
         logger.info(
-            "OAuth token obtained successfully."
+            f"OAuth token obtained successfully "
+            f"for client '{self.client_id}'."
         )
 
         return token
