@@ -52,7 +52,7 @@ class StarlinkClient:
         )
 
         return response.json()
-    
+
     def get_usage(
         self,
         service_line_numbers: list[str] | None = None,
@@ -89,7 +89,7 @@ class StarlinkClient:
         )
 
         return response.json()
-    
+
     def get_service_lines(self) -> dict:
         """
         Retrieves all Service Lines.
@@ -112,17 +112,17 @@ class StarlinkClient:
         )
 
         return response.json()
-    
+
     def get_service_line(
         self,
         service_line_number: str
     ) -> dict:
         """
-        Retrieves a single Service Line.
+        Retrieves detailed information for a single Service Line.
         """
 
         logger.info(
-            f"Retrieving Service Line {service_line_number}..."
+            f"Retrieving Service Line details: {service_line_number}"
         )
 
         response = requests.get(
@@ -134,7 +134,7 @@ class StarlinkClient:
         response.raise_for_status()
 
         logger.info(
-            "Service Line retrieved successfully."
+            f"Service Line details retrieved: {service_line_number}"
         )
 
         return response.json()

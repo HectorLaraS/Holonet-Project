@@ -42,6 +42,21 @@ def run_poll() -> None:
 
     print("Usage updated successfully.")
 
+    print()
+    print("Retrieving Service Line Details...")
+
+    for service_line in usage["content"]["results"]:
+
+        details = client.get_service_line(
+            service_line["serviceLineNumber"]
+        )
+
+        repository.save_service_line_details(
+            details
+        )
+
+    print("Service Line Details updated successfully.")
+
 
 def run_report() -> None:
     """

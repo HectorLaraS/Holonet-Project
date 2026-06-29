@@ -102,6 +102,100 @@ class Repository:
             "Products saved successfully."
         )
 
+    def save_service_line_details(
+        self,
+        service_line: dict
+    ) -> None:
+        """
+        Saves the Service Line details.
+        """
+
+        content = service_line["content"]
+
+        logger.info(
+            f"Saving Service Line details: "
+            f"{content['serviceLineNumber']}"
+        )
+
+        with DatabaseConnection() as connection:
+
+            cursor = connection.cursor()
+
+            cursor.execute(
+                """
+                MERGE starlink.service_line_details AS target
+
+                USING
+                (
+                    SELECT
+                        ? AS service_line_number,
+                        ? AS nickname,
+                        ? AS address_reference_id,
+                        ? AS product_reference_id,
+                        ? AS public_ip,
+                        ? AS active,
+                        ? AS start_date,
+                        ? AS end_date
+                ) AS source
+
+                ON target.service_line_number = source.service_line_number
+
+                WHEN MATCHED THEN
+
+                    UPDATE SET
+
+                        nickname             = source.nickname,
+                        address_reference_id = source.address_reference_id,
+                        product_reference_id = source.product_reference_id,
+                        public_ip            = source.public_ip,
+                        active               = source.active,
+                        start_date           = source.start_date,
+                        end_date             = source.end_date,
+                        last_synced_at       = SYSUTCDATETIME()
+
+                WHEN NOT MATCHED THEN
+
+                    INSERT
+                    (
+                        service_line_number,
+                        nickname,
+                        address_reference_id,
+                        product_reference_id,
+                        public_ip,
+                        active,
+                        start_date,
+                        end_date
+                    )
+
+                    VALUES
+                    (
+                        source.service_line_number,
+                        source.nickname,
+                        source.address_reference_id,
+                        source.product_reference_id,
+                        source.public_ip,
+                        source.active,
+                        source.start_date,
+                        source.end_date
+                    );
+                """,
+                content["serviceLineNumber"],
+                content.get("nickname"),
+                content.get("addressReferenceId"),
+                content.get("productReferenceId"),
+                content.get("publicIp"),
+                content.get("active"),
+                content.get("startDate"),
+                content.get("endDate")
+            )
+
+            connection.commit()
+
+        logger.info(
+            f"Service Line details saved: "
+            f"{content['serviceLineNumber']}"
+        )
+
     def save_usage(
         self,
         usage: dict
