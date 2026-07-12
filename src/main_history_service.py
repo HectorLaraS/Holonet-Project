@@ -158,6 +158,40 @@ def run_poll_history() -> None:
             records
         )
 
+        #
+        # Build Reporting Service Usage
+        #
+
+        print()
+        print(
+            "Building Reporting Service Usage..."
+        )
+
+        reporting_records = (
+            repository.build_reporting_service_usage_records()
+        )
+
+        print(
+            f"{len(reporting_records)} reporting records built."
+        )
+
+        #
+        # Save Reporting Service Usage
+        #
+
+        print()
+        print(
+            "Saving Reporting Service Usage..."
+        )
+
+        repository.save_reporting_service_usage(
+            reporting_records
+        )
+
+        print(
+            "Reporting Service Usage saved successfully."
+        )
+
         print(
             "Usage History saved successfully."
         )
@@ -167,7 +201,7 @@ def run_poll_history() -> None:
     print("History Poll completed.")
     print("=" * 60)
 
-    
+
 
 def main():
 

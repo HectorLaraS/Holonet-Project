@@ -9,6 +9,10 @@ from __future__ import annotations
 from src.database.connection import DatabaseConnection
 from src.utils.logger import get_logger
 from src.database.sql_loader import SQLLoader
+from datetime import datetime, timezone
+
+from src.config.settings import settings
+
 
 logger = get_logger(__name__)
 
@@ -1213,3 +1217,237 @@ class Repository:
         )
 
         return records
+    
+    
+    def save_reporting_service_usage(
+        self,
+        records: list[tuple]
+    ) -> None:
+        """
+        Rebuilds the ReportingServiceUsage table.
+        """
+
+        logger.info(
+            f"Saving {len(records)} Reporting Service Usage records..."
+        )
+
+        insert_sql = SQLLoader.load(
+            "refresh_reporting_service_usage.sql"
+        )
+
+        with DatabaseConnection() as connection:
+
+            cursor = connection.cursor()
+
+            logger.info(
+                "Clearing ReportingServiceUsage table..."
+            )   
+
+            cursor.execute(
+                "TRUNCATE TABLE starlink.ReportingServiceUsage;"
+            )
+
+            #
+            # fast_executemany se deja deshabilitado.
+            #
+            # Tuvimos problemas con MERGE en SQL Server y
+            # preferimos mantener un comportamiento consistente.
+            #
+
+            for record in records:
+
+                cursor.execute(
+                    insert_sql,
+                    record
+                )
+
+            connection.commit()
+
+        logger.info(
+            "Reporting Service Usage updated successfully."
+        )
+
+    def build_reporting_service_usage_records(
+        self
+    ) -> list[tuple]:
+        """
+        Builds the ReportingServiceUsage dataset.
+
+        For each Service Line, selects the current
+        Billing Cycle and the previous configured
+        Billing Cycles.
+
+        Returns:
+            List containing the selected billing
+            cycle rows.
+        """
+
+        today = datetime.now(timezone.utc).replace(
+            tzinfo=None
+        )
+
+        history_cycles = (
+            settings.BILLING_CYCLES_HISTORY
+        )
+
+        selected_rows = []
+
+        with DatabaseConnection() as connection:
+
+            cursor = connection.cursor()
+
+            cursor.execute(
+                """
+                SELECT
+                    sl.ServiceLineId,
+                    sl.AccountNumber,
+                    sl.AccountName,
+                    sl.RegionCode,
+                    sl.ServiceLineNumber,
+                    sl.Nickname,
+                    sl.ProductReferenceId,
+                    sl.ProductName,
+                    sl.CurrentRecurringBlocks50GB,
+                    sl.CurrentRecurringBlocks500GB,
+
+                    h.BillingCycleStart,
+                    h.BillingCycleEnd,
+                    h.ContractedGB,
+                    h.PriorityConsumedGB,
+                    h.StandardConsumedGB,
+                    h.TotalConsumedGB,
+                    h.ContractUsagePercent,
+                    h.ConsumptionVarianceGB,
+                    h.HasTopUps,
+                    h.TopUpCount,
+                    h.TopUpCapacityGB,
+                    h.TopUpUsedGB,
+                    h.TopUpRemainingGB,
+                    h.TopUpCost,
+                    h.OriginalBudget,
+                    h.AdditionalSpend,
+                    h.TotalCycleSpend,
+                    h.BudgetVariance,
+                    h.Currency
+                FROM starlink.ServiceLineUsageHistory h
+                INNER JOIN starlink.ServiceLine sl
+                    ON sl.ServiceLineId = h.ServiceLineId
+                ORDER BY
+                    h.ServiceLineNumber,
+                    h.BillingCycleStart DESC;
+                """
+            )
+
+            rows = cursor.fetchall()
+
+        #
+        # Group rows by Service Line
+        #
+
+        service_lines = {}
+
+        for row in rows:
+
+            service_lines.setdefault(
+                row.ServiceLineNumber,
+                []
+            ).append(row)
+
+        #
+        # Select Current Billing Cycle
+        # + Previous Billing Cycles
+        #
+
+        for cycles in service_lines.values():
+
+            current_index = None
+
+            for index, cycle in enumerate(cycles):
+
+                if (
+                    cycle.BillingCycleStart
+                    <= today
+                    <= cycle.BillingCycleEnd
+                ):
+
+                    current_index = index
+
+                    break
+
+            if current_index is None:
+
+                continue
+
+            end_index = (
+                current_index
+                + history_cycles
+                + 1
+            )
+
+            selected_cycles = cycles[
+                current_index:end_index
+            ]
+
+            for billing_cycle_order, cycle in enumerate(
+                selected_cycles
+            ):
+
+                if billing_cycle_order == 0:
+
+                    billing_cycle_label = (
+                        "Current Month"
+                    )
+
+                elif billing_cycle_order == 1:
+
+                    billing_cycle_label = (
+                        "Last Month"
+                    )
+
+                else:
+
+                    billing_cycle_label = (
+                        f"Month -{billing_cycle_order}"
+                    )
+
+                is_current_billing_cycle = (
+                    billing_cycle_order == 0
+                )
+
+                selected_rows.append(
+                    (
+                        cycle.AccountNumber,
+                        cycle.AccountName,
+                        cycle.RegionCode,
+                        cycle.ServiceLineNumber,
+                        cycle.Nickname,
+                        cycle.ProductReferenceId,
+                        cycle.ProductName,
+                        cycle.CurrentRecurringBlocks50GB,
+                        cycle.CurrentRecurringBlocks500GB,
+                        cycle.BillingCycleStart,
+                        cycle.BillingCycleEnd,
+                        billing_cycle_order,
+                        billing_cycle_label,
+                        is_current_billing_cycle,
+                        cycle.ContractedGB,
+                        cycle.PriorityConsumedGB,
+                        cycle.StandardConsumedGB,
+                        cycle.TotalConsumedGB,
+                        cycle.ContractUsagePercent,
+                        cycle.ConsumptionVarianceGB,
+                        cycle.HasTopUps,
+                        cycle.TopUpCount,
+                        cycle.TopUpCapacityGB,
+                        cycle.TopUpUsedGB,
+                        cycle.TopUpRemainingGB,
+                        cycle.TopUpCost,
+                        cycle.OriginalBudget,
+                        cycle.AdditionalSpend,
+                        cycle.TotalCycleSpend,
+                        cycle.BudgetVariance,
+                        cycle.Currency
+                    )
+                )
+
+        return selected_rows
