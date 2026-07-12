@@ -30,6 +30,29 @@ class StarlinkClient:
             "Content-Type": "application/json"
         }
 
+    def get_account(self) -> dict:
+        """
+        Retrieves the Starlink account information.
+        """
+
+        logger.info(
+            "Retrieving Starlink account..."
+        )
+
+        response = requests.get(
+            f"{self.base_url}/api/public/v2/account",
+            headers=self.headers,
+            timeout=self.timeout
+        )
+
+        response.raise_for_status()
+
+        logger.info(
+            "Starlink account retrieved successfully."
+        )
+
+        return response.json()
+
     def get_products(self) -> dict:
         """
         Retrieves the Starlink Products catalog.

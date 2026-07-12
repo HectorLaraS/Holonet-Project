@@ -78,6 +78,31 @@ class Settings:
         )
     )
 
+    # -------------------------------------------------------------------------
+    # History
+    # -------------------------------------------------------------------------
+
+    REPORT_HISTORY_INTERVAL_SECONDS = int(
+        os.getenv(
+            "REPORT_HISTORY_INTERVAL_SECONDS",
+            "86400"
+        )
+    )
+
+    BILLING_CYCLES_HISTORY = int(
+        os.getenv(
+            "BILLING_CYCLES_HISTORY",
+            "4"
+        )
+    )
+
+    SERVICE_RESTART_DELAY_SECONDS = int(
+        os.getenv(
+            "SERVICE_RESTART_DELAY_SECONDS",
+            "5"
+        )
+    )
+
     SERVICE_RESTART_DELAY_SECONDS = int(
         os.getenv(
             "SERVICE_RESTART_DELAY_SECONDS",
