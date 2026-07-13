@@ -158,6 +158,10 @@ def run_poll_history() -> None:
             records
         )
 
+        print(
+            "Usage History saved successfully."
+        )
+
         #
         # Build Reporting Service Usage
         #
@@ -192,8 +196,38 @@ def run_poll_history() -> None:
             "Reporting Service Usage saved successfully."
         )
 
+        #
+        # Build Service Line Analytics
+        #
+
+        print()
         print(
-            "Usage History saved successfully."
+            "Building Service Line Analytics..."
+        )
+
+        analytics_records = (
+            repository.build_service_line_analytics_records()
+        )
+
+        print(
+            f"{len(analytics_records)} analytics records built."
+        )
+
+        #
+        # Save Service Line Analytics
+        #
+
+        print()
+        print(
+            "Saving Service Line Analytics..."
+        )
+
+        repository.save_service_line_analytics(
+            analytics_records
+        )
+
+        print(
+            "Service Line Analytics saved successfully."
         )
 
     print()

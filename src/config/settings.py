@@ -110,5 +110,104 @@ class Settings:
         )
     )
 
+    #------------------------------------------------------------------------------
+    # ANALYTICS
+    #------------------------------------------------------------------------------
+
+    ANALYTICS_HIGH_CONFIDENCE_THRESHOLD = float(
+        os.getenv(
+            "ANALYTICS_HIGH_CONFIDENCE_THRESHOLD",
+            "0.10"
+        )
+    )
+
+    ANALYTICS_MEDIUM_CONFIDENCE_THRESHOLD = float(
+        os.getenv(
+            "ANALYTICS_MEDIUM_CONFIDENCE_THRESHOLD",
+            "0.25"
+        )
+    )
+
+    ANALYTICS_OPERATIONAL_REVIEW_MIN_TOPUPS = int(
+        os.getenv(
+            "ANALYTICS_OPERATIONAL_REVIEW_MIN_TOPUPS",
+            "3"
+        )
+    )
+
+    ANALYTICS_OPERATIONAL_REVIEW_HIGH_TOPUPS = int(
+        os.getenv(
+            "ANALYTICS_OPERATIONAL_REVIEW_HIGH_TOPUPS",
+            "6"
+        )
+    )
+
+    ANALYTICS_RECURRING_BLOCK_SIZE_GB = int(
+        os.getenv(
+            "ANALYTICS_RECURRING_BLOCK_SIZE_GB",
+            "500"
+        )
+    )
+
+    ANALYTICS_MONTHS_PER_YEAR = int(
+        os.getenv(
+            "ANALYTICS_MONTHS_PER_YEAR",
+            "12"
+        )
+    )
+
+    ANALYTICS_MINIMUM_BILLING_CYCLES = int(
+        os.getenv(
+            "ANALYTICS_MINIMUM_BILLING_CYCLES",
+            "2"
+        )
+    )
+
+    #------------------------------------------------------------------------------
+    # STARLINK PRICING
+    #------------------------------------------------------------------------------
+
+    STARLINK_US_50GB_PRICE = float(
+        os.getenv(
+            "STARLINK_US_50GB_PRICE",
+            "25.00"
+        )
+    )
+
+    STARLINK_US_500GB_PRICE = float(
+        os.getenv(
+            "STARLINK_US_500GB_PRICE",
+            "125.00"
+        )
+    )
+
+    STARLINK_CA_50GB_PRICE = float(
+        os.getenv(
+            "STARLINK_CA_50GB_PRICE",
+            "32.50"
+        )
+    )
+
+    STARLINK_CA_500GB_PRICE = float(
+        os.getenv(
+            "STARLINK_CA_500GB_PRICE",
+            "162.50"
+        )
+    )
+
+    STARLINK_MX_50GB_PRICE = float(
+        os.getenv(
+            "STARLINK_MX_50GB_PRICE",
+            "500.00"
+        )
+    )
+
+    STARLINK_MX_500GB_PRICE = float(
+        os.getenv(
+            "STARLINK_MX_500GB_PRICE",
+            "2500.00"
+        )
+    )
+
 
 settings = Settings()

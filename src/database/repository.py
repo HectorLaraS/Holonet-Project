@@ -10,8 +10,11 @@ from src.database.connection import DatabaseConnection
 from src.utils.logger import get_logger
 from src.database.sql_loader import SQLLoader
 from datetime import datetime, timezone
-
+import statistics
+from collections import defaultdict
 from src.config.settings import settings
+import math
+from decimal import Decimal
 
 
 logger = get_logger(__name__)
@@ -1451,3 +1454,758 @@ class Repository:
                 )
 
         return selected_rows
+    
+    def get_service_line_history(
+        self
+    ) -> dict[str, list]:
+        """
+        Retrieves the Billing Cycle history grouped by
+        Service Line.
+
+        Returns:
+            Dictionary where the key is the
+            ServiceLineNumber and the value is the list
+            of Billing Cycles ordered from newest to oldest.
+        """
+
+        with DatabaseConnection() as connection:
+
+            cursor = connection.cursor()
+
+            cursor.execute(
+                """
+                SELECT
+                    sl.ServiceLineId,
+                    sl.AccountNumber,
+                    sl.AccountName,
+                    sl.RegionCode,
+                    sl.ServiceLineNumber,
+                    sl.Nickname,
+                    sl.Currency,
+                    sl.CurrentRecurringBlocks500GB,
+                    sl.CurrentContractedCost,
+
+                    h.BillingCycleStart,
+                    h.BillingCycleEnd,
+                    h.ContractedGB,
+                    h.ContractedCost,
+                    h.PriorityConsumedGB,
+                    h.StandardConsumedGB,
+                    h.TotalConsumedGB,
+                    h.ContractUsagePercent,
+                    h.ConsumptionVarianceGB,
+                    h.HasTopUps,
+                    h.TopUpCount,
+                    h.TopUpCapacityGB,
+                    h.TopUpUsedGB,
+                    h.TopUpRemainingGB,
+                    h.TopUpCost,
+                    h.OriginalBudget,
+                    h.AdditionalSpend,
+                    h.TotalCycleSpend,
+                    h.BudgetVariance
+                FROM starlink.ServiceLineUsageHistory h
+                INNER JOIN starlink.ServiceLine sl
+                    ON sl.ServiceLineId = h.ServiceLineId
+                ORDER BY
+                    h.ServiceLineNumber,
+                    h.BillingCycleStart DESC
+                """
+            )
+
+            rows = cursor.fetchall()
+
+        history = {}
+
+        for row in rows:
+
+            history.setdefault(
+                row.ServiceLineNumber,
+                []
+            ).append(row)
+
+        return history
+    
+    def calculate_consumption_statistics(
+        self,
+        billing_cycles: list
+    ) -> dict:
+        """
+        Calculates consumption statistics for a
+        Service Line.
+
+        Args:
+            billing_cycles:
+                Billing Cycle history for a
+                single Service Line.
+
+        Returns:
+            Dictionary containing consumption
+            statistics.
+        """
+
+        import statistics
+
+        consumptions = [
+            cycle.TotalConsumedGB
+            for cycle in billing_cycles
+        ]
+
+        contracted = [
+            cycle.ContractedGB
+            for cycle in billing_cycles
+        ]
+
+        usage_percent = [
+            cycle.ContractUsagePercent
+            for cycle in billing_cycles
+        ]
+
+        if len(consumptions) > 1:
+
+            consumption_variance = (
+                statistics.variance(
+                    consumptions
+                )
+            )
+
+            consumption_std_dev = (
+                statistics.stdev(
+                    consumptions
+                )
+            )
+
+        else:
+
+            consumption_variance = 0
+
+            consumption_std_dev = 0
+
+        return {
+            "minimum_consumption_gb":
+                min(consumptions),
+
+            "maximum_consumption_gb":
+                max(consumptions),
+
+            "average_consumption_gb":
+                statistics.mean(
+                    consumptions
+                ),
+
+            "consumption_variance":
+                consumption_variance,
+
+            "consumption_standard_deviation_gb":
+                consumption_std_dev,
+
+            "average_contracted_gb":
+                statistics.mean(
+                    contracted
+                ),
+
+            "average_usage_percent":
+                statistics.mean(
+                    usage_percent
+                )
+        }
+    
+    def calculate_topup_statistics(
+        self,
+        billing_cycles: list
+    ) -> dict:
+        """
+        Calculates Top-Up statistics for a
+        Service Line.
+
+        Args:
+            billing_cycles:
+                Billing Cycle history for a
+                single Service Line.
+
+        Returns:
+            Dictionary containing Top-Up
+            statistics.
+        """
+
+        topup_counts = [
+            cycle.TopUpCount
+            for cycle in billing_cycles
+        ]
+
+        topup_capacity = [
+            cycle.TopUpCapacityGB
+            for cycle in billing_cycles
+        ]
+
+        topup_used = [
+            cycle.TopUpUsedGB
+            for cycle in billing_cycles
+        ]
+
+        topup_cost = [
+            cycle.TopUpCost
+            for cycle in billing_cycles
+        ]
+
+        billing_cycles_with_topups = sum(
+            1
+            for cycle in billing_cycles
+            if cycle.HasTopUps
+        )
+
+        if len(topup_cost) > 1:
+
+            topup_cost_variance = (
+                statistics.variance(
+                    topup_cost
+                )
+            )
+
+            topup_cost_std_dev = (
+                statistics.stdev(
+                    topup_cost
+                )
+            )
+
+        else:
+
+            topup_cost_variance = 0
+
+            topup_cost_std_dev = 0
+
+        return {
+
+            "billing_cycles_with_topups":
+                billing_cycles_with_topups,
+
+            "average_topup_count":
+                statistics.mean(
+                    topup_counts
+                ),
+
+            "average_topup_capacity_gb":
+                statistics.mean(
+                    topup_capacity
+                ),
+
+            "average_topup_used_gb":
+                statistics.mean(
+                    topup_used
+                ),
+
+            "average_topup_cost":
+                statistics.mean(
+                    topup_cost
+                ),
+
+            "topup_cost_variance":
+                topup_cost_variance,
+
+            "topup_cost_standard_deviation":
+                topup_cost_std_dev
+        }
+    
+    def calculate_financial_statistics(
+        self,
+        billing_cycles: list
+    ) -> dict:
+        """
+        Calculates financial statistics for a
+        Service Line.
+
+        Args:
+            billing_cycles:
+                Billing Cycle history for a
+                single Service Line.
+
+        Returns:
+            Dictionary containing financial
+            statistics.
+        """
+
+        original_budget = [
+            cycle.OriginalBudget
+            for cycle in billing_cycles
+        ]
+
+        additional_spend = [
+            cycle.AdditionalSpend
+            for cycle in billing_cycles
+        ]
+
+        total_cycle_spend = [
+            cycle.TotalCycleSpend
+            for cycle in billing_cycles
+        ]
+
+        if len(additional_spend) > 1:
+
+            additional_spend_variance = (
+                statistics.variance(
+                    additional_spend
+                )
+            )
+
+            additional_spend_std_dev = (
+                statistics.stdev(
+                    additional_spend
+                )
+            )
+
+        else:
+
+            additional_spend_variance = 0
+
+            additional_spend_std_dev = 0
+
+        return {
+
+            "average_original_budget":
+                statistics.mean(
+                    original_budget
+                ),
+
+            "average_additional_spend":
+                statistics.mean(
+                    additional_spend
+                ),
+
+            "additional_spend_variance":
+                additional_spend_variance,
+
+            "additional_spend_standard_deviation":
+                additional_spend_std_dev,
+
+            "average_total_cycle_spend":
+                statistics.mean(
+                    total_cycle_spend
+                )
+        }
+    
+    def get_recurring_block_price(
+        self,
+        region_code: str
+    ) -> float:
+        """
+        Returns the configured price for a
+        recurring 500 GB block.
+        """
+
+        if region_code == "US":
+            return Decimal(str(settings.STARLINK_US_500GB_PRICE))
+
+        if region_code == "CA":
+            return Decimal(str(settings.STARLINK_CA_500GB_PRICE))
+
+        if region_code == "MX":
+            return Decimal(str(settings.STARLINK_MX_500GB_PRICE))
+
+        return 0
+
+    def get_confidence_level(
+        self,
+        average_consumption: float,
+        standard_deviation: float
+    ) -> str:
+        """
+        Determines the confidence level for the
+        capacity recommendation.
+
+        Args:
+            average_consumption:
+                Average consumption in GB.
+
+            standard_deviation:
+                Consumption standard deviation in GB.
+
+        Returns:
+            HIGH, MEDIUM or LOW.
+        """
+
+        if average_consumption <= 0:
+            return "LOW"
+
+        coefficient_of_variation = (
+            standard_deviation /
+            average_consumption
+        )
+
+        if (
+            coefficient_of_variation
+            <= settings.ANALYTICS_HIGH_CONFIDENCE_THRESHOLD
+        ):
+            return "HIGH"
+
+        if (
+            coefficient_of_variation
+            <= settings.ANALYTICS_MEDIUM_CONFIDENCE_THRESHOLD
+        ):
+            return "MEDIUM"
+
+        return "LOW"
+    
+    def requires_operational_review(
+        self,
+        average_topup_count: float
+    ) -> bool:
+        """
+        Determines whether the Service Line
+        requires operational review.
+        """
+
+        return (
+            average_topup_count >=
+            settings.ANALYTICS_OPERATIONAL_REVIEW_MIN_TOPUPS
+        )
+    
+    def calculate_capacity_recommendation(
+        self,
+        billing_cycles: list,
+        consumption_statistics: dict,
+        topup_statistics: dict
+    ) -> dict:
+        """
+        Calculates the capacity recommendation for a
+        Service Line.
+
+        Args:
+            billing_cycles:
+                Billing Cycle history for a
+                single Service Line.
+
+            consumption_statistics:
+                Consumption statistics previously
+                calculated.
+
+            topup_statistics:
+                Top-Up statistics previously
+                calculated.
+
+        Returns:
+            Dictionary containing the capacity
+            recommendation.
+        """
+
+        average_consumption = (
+            consumption_statistics[
+                "average_consumption_gb"
+            ]
+        )
+
+        recommended_blocks = math.ceil(
+            average_consumption /
+            settings.ANALYTICS_RECURRING_BLOCK_SIZE_GB
+        )
+
+        recommended_capacity = (
+            recommended_blocks *
+            settings.ANALYTICS_RECURRING_BLOCK_SIZE_GB
+        )
+
+        region_code = billing_cycles[0].RegionCode
+
+        recurring_block_cost = (
+            self.get_recurring_block_price(
+                region_code
+            )
+        )
+
+        estimated_recurring_cost = (
+            recommended_blocks *
+            recurring_block_cost
+        )
+
+        estimated_monthly_savings = (
+            topup_statistics[
+                "average_topup_cost"
+            ]
+            -
+            estimated_recurring_cost
+        )
+
+        estimated_annual_savings = (
+            estimated_monthly_savings *
+            settings.ANALYTICS_MONTHS_PER_YEAR
+        )
+
+        confidence_level = (
+            self.get_confidence_level(
+                average_consumption,
+                consumption_statistics[
+                    "consumption_standard_deviation_gb"
+                ]
+            )
+        )
+
+        operational_review = (
+            self.requires_operational_review(
+                topup_statistics[
+                    "average_topup_count"
+                ]
+            )
+        )
+
+        recommendation = (
+            f"Add {recommended_blocks} recurring "
+            f"500 GB blocks."
+        )
+
+        recommendation_reason = (
+            "Recommendation based on average "
+            "historical consumption."
+        )
+
+        return {
+
+            "recommended_recurring_blocks":
+                recommended_blocks,
+
+            "recommended_recurring_capacity_gb":
+                recommended_capacity,
+
+            "estimated_recurring_blocks_cost":
+                estimated_recurring_cost,
+
+            "estimated_monthly_savings":
+                estimated_monthly_savings,
+
+            "estimated_annual_savings":
+                estimated_annual_savings,
+
+            "recommendation":
+                recommendation,
+
+            "recommendation_reason":
+                recommendation_reason,
+
+            "confidence_level":
+                confidence_level,
+
+            "requires_operational_review":
+                operational_review
+        }
+    
+    def build_analytics_record(
+        self,
+        billing_cycles: list,
+        consumption_statistics: dict,
+        topup_statistics: dict,
+        financial_statistics: dict,
+        recommendation: dict
+    ) -> tuple:
+        """
+        Builds a ServiceLineAnalytics record.
+        """
+
+        current = billing_cycles[0]
+
+        return (
+
+            # --------------------------------------------------------------
+            # Identification
+            # --------------------------------------------------------------
+
+            current.ServiceLineId,
+
+            current.AccountNumber,
+            current.AccountName,
+            current.RegionCode,
+
+            current.ServiceLineNumber,
+            current.Nickname,
+
+            current.Currency,
+
+            # --------------------------------------------------------------
+            # Analysis period
+            # --------------------------------------------------------------
+
+            settings.BILLING_CYCLES_HISTORY,
+
+            len(billing_cycles),
+
+            billing_cycles[-1].BillingCycleStart,
+            billing_cycles[0].BillingCycleEnd,
+
+            # --------------------------------------------------------------
+            # Consumption statistics
+            # --------------------------------------------------------------
+
+            consumption_statistics["minimum_consumption_gb"],
+            consumption_statistics["maximum_consumption_gb"],
+            consumption_statistics["average_consumption_gb"],
+            consumption_statistics["consumption_variance"],
+            consumption_statistics[
+                "consumption_standard_deviation_gb"
+            ],
+            consumption_statistics["average_contracted_gb"],
+            consumption_statistics["average_usage_percent"],
+
+            # --------------------------------------------------------------
+            # Top-Up statistics
+            # --------------------------------------------------------------
+
+            topup_statistics[
+                "billing_cycles_with_topups"
+            ],
+            topup_statistics["average_topup_count"],
+            topup_statistics["average_topup_capacity_gb"],
+            topup_statistics["average_topup_used_gb"],
+            topup_statistics["average_topup_cost"],
+            topup_statistics["topup_cost_variance"],
+            topup_statistics[
+                "topup_cost_standard_deviation"
+            ],
+
+            # --------------------------------------------------------------
+            # Financial statistics
+            # --------------------------------------------------------------
+
+            financial_statistics[
+                "average_original_budget"
+            ],
+            financial_statistics[
+                "average_additional_spend"
+            ],
+            financial_statistics[
+                "additional_spend_variance"
+            ],
+            financial_statistics[
+                "additional_spend_standard_deviation"
+            ],
+            financial_statistics[
+                "average_total_cycle_spend"
+            ],
+
+            # --------------------------------------------------------------
+            # Recommendation
+            # --------------------------------------------------------------
+
+            recommendation[
+                "recommended_recurring_blocks"
+            ],
+            recommendation[
+                "recommended_recurring_capacity_gb"
+            ],
+            recommendation[
+                "estimated_recurring_blocks_cost"
+            ],
+            recommendation[
+                "estimated_monthly_savings"
+            ],
+            recommendation[
+                "estimated_annual_savings"
+            ],
+
+            recommendation["recommendation"],
+            recommendation["recommendation_reason"],
+            recommendation["confidence_level"],
+
+            recommendation[
+                "requires_operational_review"
+            ]
+        )
+    
+    def build_service_line_analytics_records(
+        self
+    ) -> list[tuple]:
+        """
+        Builds ServiceLineAnalytics records.
+        """
+
+        logger.info(
+            "Building Service Line Analytics records..."
+        )
+
+        history = self.get_service_line_history()
+
+        records = []
+
+        for billing_cycles in history.values():
+
+            consumption_statistics = (
+                self.calculate_consumption_statistics(
+                    billing_cycles
+                )
+            )
+
+            topup_statistics = (
+                self.calculate_topup_statistics(
+                    billing_cycles
+                )
+            )
+
+            financial_statistics = (
+                self.calculate_financial_statistics(
+                    billing_cycles
+                )
+            )
+
+            recommendation = (
+                self.calculate_capacity_recommendation(
+                    billing_cycles,
+                    consumption_statistics,
+                    topup_statistics
+                )
+            )
+
+            records.append(
+                self.build_analytics_record(
+                    billing_cycles,
+                    consumption_statistics,
+                    topup_statistics,
+                    financial_statistics,
+                    recommendation
+                )
+            )
+
+        logger.info(
+            f"Built {len(records)} Service Line Analytics records."
+        )
+
+        return records
+    
+    def save_service_line_analytics(
+            self,
+            records: list[tuple]
+        ) -> None:
+        """
+        Rebuilds the ServiceLineAnalytics table.
+        """
+
+        logger.info(
+            f"Saving {len(records)} Service Line Analytics records..."
+        )
+
+        insert_sql = SQLLoader.load(
+            "refresh_service_line_analytics.sql"
+        )
+
+        with DatabaseConnection() as connection:
+
+            cursor = connection.cursor()
+
+            cursor.execute(
+                "TRUNCATE TABLE starlink.ServiceLineAnalytics;"
+            )
+
+            #
+            # fast_executemany is intentionally disabled.
+            #
+            # We prefer a consistent behavior across all
+            # database operations.
+            #
+
+            for record in records:
+
+                cursor.execute(
+                    insert_sql,
+                    record
+                )
+
+            connection.commit()
+
+        logger.info(
+            "Service Line Analytics updated successfully."
+        )
