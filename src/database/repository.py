@@ -715,6 +715,36 @@ class Repository:
                 )
 
                 #
+                # Optional API objects
+                #
+
+                data_products = (
+                    product.get("dataProducts")
+                    or {}
+                )
+
+                data_blocks = (
+                    service_line.get("dataBlocks")
+                    or {}
+                )
+
+                #
+                # Debug (temporal)
+                #
+
+                if (
+                    data_blocks.get(
+                        "recurringBlocksCurrentBillingCycle"
+                    )
+                    is None
+                ):
+
+                    logger.warning(
+                        f"{service_line['serviceLineNumber']} "
+                        "has recurringBlocksCurrentBillingCycle = None"
+                    )
+
+                #
                 # Current Billing Cycle
                 #
 
@@ -730,12 +760,11 @@ class Repository:
 
                 block_prices = {}
 
-                for block in product.get(
-                    "dataProducts",
-                    {}
-                ).get(
-                    "dataBlockProducts",
-                    []
+                for block in (
+                    data_products.get(
+                        "dataBlockProducts"
+                    )
+                    or []
                 ):
 
                     block_prices[
@@ -746,12 +775,11 @@ class Repository:
                 # Current Recurring Blocks
                 #
 
-                for block in service_line.get(
-                    "dataBlocks",
-                    {}
-                ).get(
-                    "recurringBlocksCurrentBillingCycle",
-                    []
+                for block in (
+                    data_blocks.get(
+                        "recurringBlocksCurrentBillingCycle"
+                    )
+                    or []
                 ):
 
                     count = block.get(

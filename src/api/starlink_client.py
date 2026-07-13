@@ -122,19 +122,69 @@ class StarlinkClient:
             "Retrieving Service Lines..."
         )
 
-        response = requests.get(
-            f"{self.base_url}/api/public/v2/service-lines",
-            headers=self.headers,
-            timeout=self.timeout
-        )
+        page = 0
+        limit = 100
 
-        response.raise_for_status()
+        all_results = []
+
+        response_json = None
+
+        while True:
+
+            response = requests.get(
+                (
+                    f"{self.base_url}"
+                    f"/api/public/v2/service-lines"
+                    f"?page={page}&limit={limit}"
+                ),
+                headers=self.headers,
+                timeout=self.timeout
+            )
+
+            response.raise_for_status()
+
+            response_json = response.json()
+
+            results = response_json[
+                "content"
+            ][
+                "results"
+            ]
+
+            all_results.extend(
+                results
+            )
+
+            logger.info(
+                f"Page {page} retrieved "
+                f"({len(results)} Service Lines)."
+            )
+
+            if response_json[
+                "content"
+            ][
+                "isLastPage"
+            ]:
+
+                break
+
+            page += 1
+
+        response_json[
+            "content"
+        ][
+            "results"
+        ] = all_results
 
         logger.info(
-            "Service Lines retrieved successfully."
+            f"{len(all_results)} Service Lines retrieved successfully."
         )
 
-        return response.json()
+        logger.info(
+            f"Total pages processed: {page + 1}"
+        )
+
+        return response_json
 
     def get_service_line(
         self,
